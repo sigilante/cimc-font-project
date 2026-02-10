@@ -98,7 +98,7 @@ TODO include session here
 
 It only took five minutes to go from a spec to a working glyph review tool suitable for (what I may as well call) sentiment analyis.
 
-![](Pasted image 20260205113722.png)
+![](Pastedimage20260205113722.png)
 (The reason this is necessary isn't because current font tools can't give you this tabular overview—they can—it's because METAPOST outputs are SVGs not entries in a font file.)
 
 Armed with the judgment, the first thing to do is to see if Claude can fix the font itself.  (I gave specific feedback on the flawed glyphs, not just an approval or disapproval.)  There were two glyphs across all weights that required serious attention, `Y` and `𐐔`.  The only feedback I gave Claude was the description of the serif flaws in the JSON feedback document.  It fixed `Y` with no trouble but `𐐔` required some rounds of feedback.  This helped me clean up a longstanding gumption trap with the implementation in about thirty minutes of total work.
@@ -425,9 +425,9 @@ From this basis, we devised a set of scripts to attempt to extract some paramete
 Now, a caveat:  I am working with IDC Calyptapis, which is a slab serif font using a uniform stroke weight.  This is both good (in that it is fairly straightforward to model) and bad (in that it is less complicated than, say, Computer Modern would be).  But one has to start somewhere! and DTF Perdita will be more complex when we get to it.
 
 I also circled back around and fixed the lingering junction issue at the lower right of five glyphs:
-![](Pasted image 20260206140447.png)
+![](Pastedimage20260206140447.png)
 which now looks like:
-![](Pasted image 20260206141209.png)
+![](Pastedimage20260206141209.png)
 (The tool to fix the curve was built by the LLM, but it still required hand-tuning to visually fix the parameters.)
 
 Typography has irreducible gestalt properties which make it hard to quantify, but arguably this makes it better for consciousness research not worse. We need frameworks to lean into emergence, not try to abstract it out of existence. Typography has reasonably tight feedback loops, resists full formalization, and exhibits emergent properties to/effects on conscious minds.
@@ -705,7 +705,7 @@ Not bad.  Let's proceed.
 ```
 
 Here's the first pass:
-![](Pasted image 20260206153302.png)
+![](Pastedimage20260206153302.png)
 
 In a sense, not bad.  They generally do kind of match the style.
 
@@ -784,7 +784,7 @@ Good — the feedback is specific.  Let me look at glyph 4015 (Ue003) which the 
     inverse of 6
 ```
 
-![](Pasted image 20260206155010.png)
+![](Pastedimage20260206155010.png)
 
 * 0, 1, 4, 6, 7, 8 all good enough to move forwards.
 * We're not likely to improve on 2 or 3 much at this point without manual tuning.
@@ -795,7 +795,7 @@ Good — the feedback is specific.  Let me look at glyph 4015 (Ue003) which the 
 
 After another round of feedback:
 
-![](Pasted image 20260206160429.png)
+![](Pastedimage20260206160429.png)
 I know enough about METAPOST to know why Claude struggles with the loops on 5, 6, and 9:  circles define their extent by 8 points around the 360° and cannot go negative, so if you want something that extends past the starting point you either have to rotate the arc or you have to construct it from two separate curves.  That's teachable I think but I should probably model it to Claude instead of describing it in a prompt.  But these are very good for a cold intro like we did!
 
 Now, aesthetically these aren't terrible, especially because they were designed by a blind man as it were.  I don't _like_ the 2, 3, 4, or 5 but they _match_ the font.  0, 1, 7, 8 are quite good; I like the baroque so personally I'd add a crossbar on the 7, and the upper right junction will need some spot tuning.  I prefer open 4s, and the top of the 2 should look more like the `𐐀`, as should 6 and 9.  There's not a great precedent for 5 in any case so it really is a human design problem at this point.  The 3 needs the notch at right but otherwise is great.
@@ -823,7 +823,7 @@ Obviously there are a number of places that can break down and require intervent
 
 
 IDC Calyptapis aside:  I asked for basic ASCII punctuation marks, and this was the first pass:
-![](Pasted image 20260206205557.png)
+![](Pastedimage20260206205557.png)
 ```
 ⏺ Done. Here's the full set with the mapping:                                   
   Char: .                                                                       
@@ -921,7 +921,7 @@ IDC Calyptapis aside:  I asked for basic ASCII punctuation marks, and this was t
   merge at Black weight
 ```
 
-![](Pasted image 20260206211736.png)
+![](Pastedimage20260206211736.png)
 ```
 ⏺ Done. The new ? uses 416's (Jee) loop vocabulary directly: the same 5-node
   spiral loop scaled 2/3 and shifted to the upper portion, a bar descending from
@@ -930,7 +930,7 @@ IDC Calyptapis aside:  I asked for basic ASCII punctuation marks, and this was t
   mark.                                                                         
 ```
 
-![](Pasted image 20260206212021.png)
+![](Pastedimage20260206212021.png)
 Now, while I'm not nuts about `?` still (it's facing the wrong way at least), there's some consideration of form going into it by the LLM.
 
 Like early computer art, the possibilities of this approach will probably have a hard ceiling for a long time.  You can conceive of interesting questions:  interpolate between a Bodoni and a Times New Roman, for example, or make a TNR-style Devanagari.
@@ -952,7 +952,7 @@ What I have in hand now:  some Python scripts designed to systematically extract
 (Regarding minuscules:  classic Deseret typography never differentiated minuscules by form, only by size.  The Oversize specimen is the only 19th-century design I am aware of that employs different forms for some minuscules.  Jenkins, of course, started experimenting with other shapes in the Aughts.  WE only need to import and scale the letters appropriately; my guess as a typographer is that IDC Calyptapis minuscules will work if we supply the next weight up scaled down such that the stroke size is the same as the target; that is, use small versions of SemiBold for Regular and so forth.  In that case, we need a minuscule model that is heavier than Black.)
 
 First pass:
-![](Pasted image 20260209093713.png)
+![](Pastedimage20260209093713.png)
 The main issue here (which is common to FontForge and nothing I can lay at the feet of the LLM's attempt) is that the SVG directions lead to intersections being cut out.  This is touchy to handle even manually, so I'll try revisiting how the SVGs are produced by METAPOST (maybe I can preemptively reverse their direction in necessary cases).  The punctuation is being oddly sized because the scaling factor is currently pinned to the glyph height, which is clearly wrong for punctuation (we can use the internal `x_radius` parameter as a basis to tune this automatically).
 
 (Typical of technology like MetaPost, there's a thorny mapping issue for code points, wherein I must use decimal code points because hexadecimal isn't supported—okay—but then I am limited to 32767 as my maximum number, whereas Deseret is far beyond that point.  Thus I MUST have a number mapping, sigh.  Fortunately, using modulo 32768 actually results in disjoint sets for everything we care about.)
@@ -1017,7 +1017,7 @@ Really, though, this is a pain.  Machine vision algorithms like OpenCV kind of s
 
 So I talked through a verbal description of the glyph with Claude (as above) then we co-constructed an optimization algorithm with 11 tunable parameters.
 
-![](Pasted image 20260209200639.png)
+![](Pastedimage20260209200639.png)
 If I'm being bullish, then I say that the optimization successfully extracted a structurally correct parametric representation from the specimen.  It's not pixel-perfect but the parameters make further refinement tractable.  This demonstrates that METAPOST's tool-based representation is amenable to machine learning, unlike black-box geometric approaches.  If I'm being bearish, then I can focus on the inability to settle the thickness and the angular tension of the components.
 
 The pitch at this point is essentially:
@@ -1031,10 +1031,10 @@ But that's not good enough.  I want something a bit stronger.  And we're wanderi
 
 So we cooked up a tool to let me set fixed points (including directions) over the image.
 
-![](Pasted image 20260210094237.png)
+![](Pastedimage20260210094237.png)
 
 which renders in METAPOST with default tensions as:
-![](Pasted image 20260210092829.png)
+![](Pastedimage20260210092829.png)
 Not bad!  Let's try optimizing it.
 
 ```
@@ -1059,7 +1059,7 @@ Optimizing 28 free parameters...
 ```
 
 Oh no.  There are way too many free parameters to optimize over here and I am skeptical there's an algorithm good enough to do it in any reasonable amount of time.
-![](Pasted image 20260210125833.png)
+![](Pastedimage20260210125833.png)
 
 Let's couple them so there are fewer to check:  there should only be two limiting pen sizes, and absolute $x$ and $y$ positions should instead be proportions within an overall vertical and horizontal scale.  That can reduce us to 10 or 12 parameters easily.
 
