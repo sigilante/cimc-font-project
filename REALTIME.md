@@ -92,10 +92,6 @@ In any case, what we want concretely is a threefold production:
 
 I fired up Claude Code in the `idc-calyptapis/` folder with the context from the chat in a `docs/` file.
 
-```
-TODO include session here
-```
-
 It only took five minutes to go from a spec to a working glyph review tool suitable for (what I may as well call) sentiment analyis.
 
 ![](Pastedimage20260205113722.png)
