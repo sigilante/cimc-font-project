@@ -1,0 +1,3059 @@
+{
+  "global_params": {
+    "x_radius": "0.45 * font_size",
+    "y_radius": "0.5 * font_size",
+    "cap_height": null,
+    "x_height": "x_radius",
+    "em_width": null,
+    "pens": {
+      "peg_pen": "pensquare scaled pen_height",
+      "thin_pen": "pencircle scaled pen_height",
+      "flat_pen": "makepen ((0,0)--(pen_height,0))",
+      "tall_pen": "makepen ((0,0)--(0,pen_height))",
+      "loz_pen": "makepen (fullcircle xscaled (0.25 * pen_height) yscaled pen_height)"
+    },
+    "variables": {
+      "pen_height": "0.21 * font_size",
+      "x_radius": "0.45 * font_size",
+      "y_radius": "0.5 * font_size",
+      "x_height": "x_radius",
+      "outputtemplate": "\"%j-%c.svg\""
+    },
+    "raw_header": "% Base font parameters\nnumeric font_size, pen_height, x_height;\nfont_size  := 72pt;\npen_height := 0.21 * font_size;\n\nnumeric x_radius, y_radius, Ox, Oy;\nx_radius := 0.45 * font_size;\ny_radius := 0.5 * font_size;\nx_height := x_radius;\nOx := 0;\nOy := 0;\n\n% Pens\npen peg_pen ;    peg_pen    = pensquare scaled pen_height;\npen thin_pen ;   thin_pen   = pencircle scaled pen_height;\npen flat_pen ;   flat_pen   = makepen ((0,0)--(pen_height,0));\npen tall_pen ;   tall_pen   = makepen ((0,0)--(0,pen_height));\npen loz_pen ;    loz_pen    = makepen (fullcircle xscaled (0.25 * pen_height) yscaled pen_height);\n\n% Macro for drawing with rotating pen using overlapping strokes\nvardef rotatingdraw(expr p, start_ang, end_ang, n, overlap) =\n  save i, t_start, t_end, ang, plen;\n  plen := length(p);\n  for i = 0 upto n-1:\n    t_start := max(0, (i - overlap)/n) * plen;\n    t_end := min(plen, (i + 1 + overlap)/n) * plen;\n    ang := start_ang + (end_ang - start_ang) * (i + 0.5)/n;\n    pickup loz_pen rotated ang;\n    draw subpath (t_start, t_end) of p;\n  endfor\nenddef;\n\n% Format parameters\noutputtemplate := \"%j-%c.svg\";\noutputformat := \"svg\";\n\n% Letters\ninput src/letters/U10400.mp; % Deseret Capital Letter Long I (\ud801\udc00)\ninput src/letters/U10401.mp; % Deseret Capital Letter Long E (\ud801\udc01)\ninput src/letters/U10402.mp; % Deseret Capital Letter Long A (\ud801\udc02)\ninput src/letters/U10403.mp; % Deseret Capital Letter Long Ah (\ud801\udc03)\ninput src/letters/U10404.mp; % Deseret Capital Letter Long O (\ud801\udc04)\ninput src/letters/U10405.mp; % Deseret Capital Letter Long Oo (\ud801\udc05)\ninput src/letters/U10406.mp; % Deseret Capital Letter Short I (\ud801\udc06)\ninput src/letters/U10407.mp; % Deseret Capital Letter Short E (\ud801\udc07)\ninput src/letters/U10408.mp; % Deseret Capital Letter Short A (\ud801\udc08)\ninput src/letters/U10409.mp; % Deseret Capital Letter Short Ah (\ud801\udc09)\ninput src/letters/U1040a.mp; % Deseret Capital Letter Short O (\ud801\udc0a) 4000\ninput src/letters/U1040b.mp; % Deseret Capital Letter Short Oo (\ud801\udc0b) 4001\ninput src/letters/U1040c.mp; % Deseret Capital Letter Ay (\ud801\udc0c) 4002\ninput src/letters/U1040d.mp; % Deseret Capital Letter Ow (\ud801\udc0d) 4003\ninput src/letters/U1040e.mp; % Deseret Capital Letter W (\ud801\udc0e) 4004\ninput src/letters/U1040f.mp; % Deseret Capital Letter Yee (\ud801\udc0f) 4005\ninput src/letters/U10410.mp; % Deseret Capital Letter H (\ud801\udc10)\ninput src/letters/U10411.mp; % Deseret Capital Letter Pe (\ud801\udc11)\ninput src/letters/U10412.mp; % Deseret Capital Letter Bee (\ud801\udc12)\ninput src/letters/U10413.mp; % Deseret Capital Letter Tee (\ud801\udc13)\ninput src/letters/U10414.mp; % Deseret Capital Letter Dee (\ud801\udc14)\ninput src/letters/U10415.mp; % Deseret Capital Letter Chee (\ud801\udc15)\ninput src/letters/U10416.mp; % Deseret Capital Letter Jee (\ud801\udc16)\ninput src/letters/U10417.mp; % Deseret Capital Letter Kay (\ud801\udc17)\ninput src/letters/U10418.mp; % Deseret Capital Letter Gay (\ud801\udc18)\ninput src/letters/U10419.mp; % Deseret Capital Letter Ef (\ud801\udc19)\ninput src/letters/U1041a.mp; % Deseret Capital Letter Vee (\ud801\udc1a) 4006\ninput src/letters/U1041b.mp; % Deseret Capital Letter Eth (\ud801\udc1b) 4007\ninput src/letters/U1041c.mp; % Deseret Capital Letter Thee (\ud801\udc1c) 4008\ninput src/letters/U1041d.mp; % Deseret Capital Letter Es (\ud801\udc1d) 4009\ninput src/letters/U1041e.mp; % Deseret Capital Letter Zee (\ud801\udc1e) 4010\ninput src/letters/U1041f.mp; % Deseret Capital Letter Esh (\ud801\udc1f) 4011\ninput src/letters/U10420.mp; % Deseret Capital Letter Zhee (\ud801\udc20)\ninput src/letters/U10421.mp; % Deseret Capital Letter Er (\ud801\udc21)\ninput src/letters/U10422.mp; % Deseret Capital Letter El (\ud801\udc22)\ninput src/letters/U10423.mp; % Deseret Capital Letter Em (\ud801\udc23)\ninput src/letters/U10424.mp; % Deseret Capital Letter En (\ud801\udc24)\ninput src/letters/U10425.mp; % Deseret Capital Letter Eng (\ud801\udc25)\ninput src/letters/U10426.mp; % Deseret Capital Letter Oi (\ud801\udc26)\ninput src/letters/U10427.mp; % Deseret Capital Letter Ew (\ud801\udc27)\n\ninput src/letters/Ue000.mp; % Deseret Capital Letter Variant MULE 4012\ninput src/letters/Ue001.mp; % Deseret Capital Letter Variant CHOICE 4013\ninput src/letters/Ue002.mp; % Deseret Capital Letter SQUARE 4014\ninput src/letters/Ue003.mp; % Deseret Capital Letter Variant Open Vee 4015\ninput src/letters/Ue004.mp; % Deseret Capital Letter Variant Looped Short Ah 4016\ninput src/letters/Ue005.mp; % Deseret Capital Letter Variant Looped Shart A 4017\ninput src/letters/Ue00c.mp; % Deseret Capital Letter Variant 4018\n\nend\n"
+  },
+  "glyphs": {
+    "U10400": {
+      "unicode_codepoint": "U10400",
+      "unicode_name": "DESERET CAPITAL LETTER LONG I",
+      "fig_number": 400,
+      "filename": "calyptapis/src/letters/U10400.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "lower_circle": "lower_circle scaled (2/3) shifted (2/3*x_radius, -1/3*y_radius)",
+        "lower_arc": "lower_arc    scaled (2/3) shifted (2/3*x_radius, -1/3*y_radius)",
+        "upper_circle": "upper_circle scaled (2/3) shifted (2/3*x_radius, 1/3*y_radius)",
+        "serif": "(xpart point 0 of lower_circle, ypart point 0 of lower_circle)\n          -- (xpart point 0 of lower_circle, ypart point 0 of lower_circle-(1/3)*y_radius)"
+      },
+      "paths": [
+        {
+          "name": "lower_circle",
+          "path_type": "closed_path",
+          "base_definition": "(Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-x_radius, Oy){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){up}\n                  .. tension 0.9\n                  .. cycle",
+          "transformations": [
+            {
+              "type": "scaled",
+              "value": "2/3"
+            },
+            {
+              "type": "shifted",
+              "value": "2/3*x_radius, -1/3*y_radius"
+            }
+          ],
+          "pen_used": null
+        },
+        {
+          "name": "upper_circle",
+          "path_type": "curved_path",
+          "base_definition": "(-x_radius, (1/2)*y_radius){up}\n                  .. tension 0.9\n                  .. (Ox, y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){down}",
+          "transformations": [
+            {
+              "type": "scaled",
+              "value": "2/3"
+            },
+            {
+              "type": "shifted",
+              "value": "2/3*x_radius, 1/3*y_radius"
+            }
+          ],
+          "pen_used": null
+        },
+        {
+          "name": "lower_arc",
+          "path_type": "curved_path",
+          "base_definition": "(x_radius, Oy){down}\n               .. tension 0.9\n               .. (Ox, -y_radius){left}",
+          "transformations": [
+            {
+              "type": "scaled",
+              "value": "2/3"
+            },
+            {
+              "type": "shifted",
+              "value": "2/3*x_radius, -1/3*y_radius"
+            }
+          ],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "(xpart point 0 of lower_circle, ypart point 0 of lower_circle)\n          -- (xpart point 0 of lower_circle, ypart point 0 of lower_circle-(1/3)*y_radius)",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "subpath (0, 3) of lower_circle",
+        "upper_circle\n       .. tension 0.9\n       .. lower_arc cutafter point 0.5 of lower_arc",
+        "serif"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        }
+      ],
+      "uses_reflection": false,
+      "reflection_axis": null,
+      "complexity": 4,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n\n  path lower_circle;\n  lower_circle := (Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-x_radius, Oy){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){up}\n                  .. tension 0.9\n                  .. cycle;\n\n  lower_circle := lower_circle scaled (2/3) shifted (2/3*x_radius, -1/3*y_radius);\n  draw subpath (0, 3) of lower_circle;\n\n  pickup thin_pen;\n\n  path upper_circle;\n  path lower_arc;\n  lower_arc := (x_radius, Oy){down}\n               .. tension 0.9\n               .. (Ox, -y_radius){left};\n  upper_circle := (-x_radius, (1/2)*y_radius){up}\n                  .. tension 0.9\n                  .. (Ox, y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){down};\n  upper_circle := upper_circle scaled (2/3) shifted (2/3*x_radius, 1/3*y_radius);\n  lower_arc    := lower_arc    scaled (2/3) shifted (2/3*x_radius, -1/3*y_radius);\n  draw upper_circle\n       .. tension 0.9\n       .. lower_arc cutafter point 0.5 of lower_arc;\n\n  pickup loz_pen rotated 90;\n  path serif;\n  serif := (xpart point 0 of lower_circle, ypart point 0 of lower_circle)\n          -- (xpart point 0 of lower_circle, ypart point 0 of lower_circle-(1/3)*y_radius);\n  draw serif;\n\n"
+    },
+    "U10401": {
+      "unicode_codepoint": "U10401",
+      "unicode_name": "DESERET CAPITAL LETTER LONG E",
+      "fig_number": 401,
+      "filename": "calyptapis/src/letters/U10401.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "upper_loop": "upper_loop scaled (2/3) shifted (2/3*x_radius, 1/3*y_radius)",
+        "lower_loop": "lower_loop scaled (2/3) shifted (2/3*x_radius, -1/3*y_radius)",
+        "serif": "(0.75x_radius, (1/3)*y_radius)\n          -- (0.75x_radius, (-1/3)*y_radius)"
+      },
+      "paths": [
+        {
+          "name": "upper_loop",
+          "path_type": "loop",
+          "base_definition": "(x_radius, (1/2)*y_radius){up}\n                .. tension 0.9\n                .. (Ox, y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){down}\n                .. tension 0.9\n                .. (Ox, -.5*y_radius){right}",
+          "transformations": [
+            {
+              "type": "scaled",
+              "value": "2/3"
+            },
+            {
+              "type": "shifted",
+              "value": "2/3*x_radius, 1/3*y_radius"
+            }
+          ],
+          "pen_used": null
+        },
+        {
+          "name": "lower_loop",
+          "path_type": "loop",
+          "base_definition": "(x_radius, (-1/2)*y_radius){down}\n                .. tension 0.9\n                .. (Ox, -y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){up}\n                .. tension 0.9\n                .. (Ox, .5*y_radius){right}",
+          "transformations": [
+            {
+              "type": "scaled",
+              "value": "2/3"
+            },
+            {
+              "type": "shifted",
+              "value": "2/3*x_radius, -1/3*y_radius"
+            }
+          ],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "(0.75x_radius, (1/3)*y_radius)\n          -- (0.75x_radius, (-1/3)*y_radius)",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "upper_loop",
+        "lower_loop",
+        "serif"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        }
+      ],
+      "uses_reflection": false,
+      "reflection_axis": null,
+      "complexity": 3,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n\n  path upper_loop;\n  upper_loop := (x_radius, (1/2)*y_radius){up}\n                .. tension 0.9\n                .. (Ox, y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){down}\n                .. tension 0.9\n                .. (Ox, -.5*y_radius){right}\n                ;\n  upper_loop := upper_loop scaled (2/3) shifted (2/3*x_radius, 1/3*y_radius);\n  draw upper_loop;\n\n  path lower_loop;\n  lower_loop := (x_radius, (-1/2)*y_radius){down}\n                .. tension 0.9\n                .. (Ox, -y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){up}\n                .. tension 0.9\n                .. (Ox, .5*y_radius){right}\n                ;\n  lower_loop := lower_loop scaled (2/3) shifted (2/3*x_radius, -1/3*y_radius);\n  draw lower_loop;\n\n  pickup loz_pen rotated 90;\n  path serif;\n  serif := (0.75x_radius, (1/3)*y_radius)\n          -- (0.75x_radius, (-1/3)*y_radius);\n  draw serif;\n\n"
+    },
+    "U10402": {
+      "unicode_codepoint": "U10402",
+      "unicode_name": "DESERET CAPITAL LETTER LONG A",
+      "fig_number": 402,
+      "filename": "calyptapis/src/letters/U10402.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "upper_loop": "upper_loop scaled (2/3) shifted (2/3*x_radius, 1/3*y_radius)",
+        "lower_loop": "lower_loop scaled (2/3) shifted (2/3*x_radius, -1/3*y_radius)"
+      },
+      "paths": [
+        {
+          "name": "upper_loop",
+          "path_type": "loop",
+          "base_definition": "(x_radius, (1/2)*y_radius){up}\n                .. tension 0.9\n                .. (Ox, y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){down}\n                .. tension 0.9\n                .. (Ox, -.5*y_radius){right}",
+          "transformations": [
+            {
+              "type": "scaled",
+              "value": "2/3"
+            },
+            {
+              "type": "shifted",
+              "value": "2/3*x_radius, 1/3*y_radius"
+            }
+          ],
+          "pen_used": null
+        },
+        {
+          "name": "lower_loop",
+          "path_type": "loop",
+          "base_definition": "(x_radius, (-1/2)*y_radius){down}\n                .. tension 0.9\n                .. (Ox, -y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){up}\n                .. tension 0.9\n                .. (Ox, .5*y_radius){right}",
+          "transformations": [
+            {
+              "type": "scaled",
+              "value": "2/3"
+            },
+            {
+              "type": "shifted",
+              "value": "2/3*x_radius, -1/3*y_radius"
+            }
+          ],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "upper_loop",
+        "lower_loop",
+        "point 0 of upper_loop -- point 0 of lower_loop"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        }
+      ],
+      "uses_reflection": false,
+      "reflection_axis": null,
+      "complexity": 2,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n\n  path upper_loop;\n  upper_loop := (x_radius, (1/2)*y_radius){up}\n                .. tension 0.9\n                .. (Ox, y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){down}\n                .. tension 0.9\n                .. (Ox, -.5*y_radius){right}\n                ;\n  upper_loop := upper_loop scaled (2/3) shifted (2/3*x_radius, 1/3*y_radius);\n  draw upper_loop;\n\n  path lower_loop;\n  lower_loop := (x_radius, (-1/2)*y_radius){down}\n                .. tension 0.9\n                .. (Ox, -y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){up}\n                .. tension 0.9\n                .. (Ox, .5*y_radius){right}\n                ;\n  lower_loop := lower_loop scaled (2/3) shifted (2/3*x_radius, -1/3*y_radius);\n  draw lower_loop;\n\n  pickup loz_pen rotated 90;\n  draw point 0 of upper_loop -- point 0 of lower_loop;\n\n"
+    },
+    "U10403": {
+      "unicode_codepoint": "U10403",
+      "unicode_name": "DESERET CAPITAL LETTER LONG AH",
+      "fig_number": 403,
+      "filename": "calyptapis/src/letters/U10403.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "outer_circle": "(Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-x_radius, Oy){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){up}\n                  .. tension 0.9\n                  .. cycle",
+        "serif": "subpath(0.45, 0.55) of outer_circle"
+      },
+      "paths": [
+        {
+          "name": "outer_circle",
+          "path_type": "closed_path",
+          "base_definition": "(Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-x_radius, Oy){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){up}\n                  .. tension 0.9\n                  .. cycle",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "subpath(0.45, 0.55) of outer_circle",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "(outer_circle cutbefore point 0.55 of outer_circle cutafter point 4 of outer_circle)\n       .. (loop cutbefore point 3 of loop cutafter point 5 of loop)\n       .. point 3 of outer_circle\n       ",
+        "serif"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        }
+      ],
+      "uses_reflection": false,
+      "reflection_axis": null,
+      "complexity": 2,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n\n  path outer_circle;\n  outer_circle := (Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-x_radius, Oy){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){up}\n                  .. tension 0.9\n                  .. cycle;\n\n  path loop;\n  loop = fullcircle xscaled x_radius yscaled y_radius shifted (0.1*x_radius, 0.5 * y_radius);\n  draw (outer_circle cutbefore point 0.55 of outer_circle cutafter point 4 of outer_circle)\n       .. (loop cutbefore point 3 of loop cutafter point 5 of loop)\n       .. point 3 of outer_circle\n       ;\n\n  pickup loz_pen rotated 45;\n  path serif;\n  serif := subpath(0.45, 0.55) of outer_circle;\n  draw serif;\n\n"
+    },
+    "U10404": {
+      "unicode_codepoint": "U10404",
+      "unicode_name": "DESERET CAPITAL LETTER LONG O",
+      "fig_number": 404,
+      "filename": "calyptapis/src/letters/U10404.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "outer_circle": "(Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-x_radius, Oy){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){up}\n                  .. tension 0.9\n                  .. cycle"
+      },
+      "paths": [
+        {
+          "name": "outer_circle",
+          "path_type": "closed_path",
+          "base_definition": "(Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-x_radius, Oy){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){up}\n                  .. tension 0.9\n                  .. cycle",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "outer_circle"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        }
+      ],
+      "uses_reflection": false,
+      "reflection_axis": null,
+      "complexity": 1,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n\n  path outer_circle;\n  outer_circle := (Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-x_radius, Oy){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){up}\n                  .. tension 0.9\n                  .. cycle;\n\n  draw outer_circle;\n\n"
+    },
+    "U10405": {
+      "unicode_codepoint": "U10405",
+      "unicode_name": "DESERET CAPITAL LETTER LONG OO",
+      "fig_number": 405,
+      "filename": "calyptapis/src/letters/U10405.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "outer_circle": "(Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-x_radius, Oy){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){up}\n                  .. tension 0.9\n                  .. cycle",
+        "bar": "(Ox, -y_radius) -- (Ox, y_radius)"
+      },
+      "paths": [
+        {
+          "name": "outer_circle",
+          "path_type": "closed_path",
+          "base_definition": "(Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-x_radius, Oy){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){up}\n                  .. tension 0.9\n                  .. cycle",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "bar",
+          "path_type": "crossbar",
+          "base_definition": "(Ox, -y_radius) -- (Ox, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "outer_circle",
+        "bar"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "thin_pen"
+        }
+      ],
+      "uses_reflection": false,
+      "reflection_axis": null,
+      "complexity": 2,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n\n  path outer_circle;\n  outer_circle := (Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-x_radius, Oy){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){up}\n                  .. tension 0.9\n                  .. cycle;\n\n  draw outer_circle;\n\n  pickup thin_pen;\n\n  path bar;\n  bar := (Ox, -y_radius) -- (Ox, y_radius);\n\n  draw bar;\n"
+    },
+    "U10406": {
+      "unicode_codepoint": "U10406",
+      "unicode_name": "DESERET CAPITAL LETTER SHORT I",
+      "fig_number": 406,
+      "filename": "calyptapis/src/letters/U10406.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "bar": "(Ox, -y_radius) -- (Ox, y_radius)",
+        "serif": "(-(1/3) * x_radius, y_radius)\n           -- ((1/3) * x_radius, y_radius)",
+        "beam": "(-0.5 * x_radius, Oy)\n          -- (0.5 * x_radius, Oy)"
+      },
+      "paths": [
+        {
+          "name": "bar",
+          "path_type": "crossbar",
+          "base_definition": "(Ox, -y_radius) -- (Ox, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "(-(1/3) * x_radius, y_radius)\n           -- ((1/3) * x_radius, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "beam",
+          "path_type": "straight_segment",
+          "base_definition": "(-0.5 * x_radius, Oy)\n          -- (0.5 * x_radius, Oy)",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "bar",
+        "serif",
+        "serif shifted (0, -2.0 * y_radius)",
+        "beam rotated -15"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "loz_pen"
+        }
+      ],
+      "uses_reflection": false,
+      "reflection_axis": null,
+      "complexity": 3,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n\n  path bar;\n  bar := (Ox, -y_radius) -- (Ox, y_radius);\n\n  draw bar;\n\n  pickup loz_pen;\n\n  path serif;\n  serif := (-(1/3) * x_radius, y_radius)\n           -- ((1/3) * x_radius, y_radius);\n  draw serif;\n  draw serif shifted (0, -2.0 * y_radius);\n\n  pickup loz_pen rotated -15;\n  path beam;\n  beam := (-0.5 * x_radius, Oy)\n          -- (0.5 * x_radius, Oy);\n  draw beam rotated -15;\n\n"
+    },
+    "U10407": {
+      "unicode_codepoint": "U10407",
+      "unicode_name": "DESERET CAPITAL LETTER SHORT E",
+      "fig_number": 407,
+      "filename": "calyptapis/src/letters/U10407.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "bar": "(Ox, -y_radius) -- (Ox, y_radius)",
+        "serif": "(-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius)",
+        "arc": "halfcircle scaled (1.5*x_radius) shifted (-0.75*x_radius, -y_radius)"
+      },
+      "paths": [
+        {
+          "name": "bar",
+          "path_type": "crossbar",
+          "base_definition": "(Ox, -y_radius) -- (Ox, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "(-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "arc",
+          "path_type": "unknown",
+          "base_definition": "halfcircle scaled (1.5*x_radius) shifted (-0.75*x_radius, -y_radius)",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "bar",
+        "serif",
+        "serif shifted (0, -2.0 * y_radius)",
+        "serif shifted (-1.5*x_radius, -2.0 * y_radius)",
+        "arc"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "thin_pen"
+        }
+      ],
+      "uses_reflection": false,
+      "reflection_axis": null,
+      "complexity": 3,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n\n  path bar;\n  bar := (Ox, -y_radius) -- (Ox, y_radius);\n\n  draw bar;\n\n  pickup loz_pen;\n\n  path serif;\n  serif := (-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius);\n  draw serif;\n  draw serif shifted (0, -2.0 * y_radius);\n  draw serif shifted (-1.5*x_radius, -2.0 * y_radius);\n\n  pickup thin_pen;\n  path arc;\n  arc := halfcircle scaled (1.5*x_radius) shifted (-0.75*x_radius, -y_radius);\n  \n  draw arc;\n\n"
+    },
+    "U10408": {
+      "unicode_codepoint": "U10408",
+      "unicode_name": "DESERET CAPITAL LETTER SHORT A",
+      "fig_number": 408,
+      "filename": "calyptapis/src/letters/U10408.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "bar": "(Ox, -y_radius - 0.325*pen_height) -- (Ox, y_radius)",
+        "serif": "(-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius)",
+        "sweep_base": "(-0.75*x_radius,-1.0*y_radius)\n          .. tension 0.9\n          .. (Ox,-1.0*y_radius-0.25*pen_height)\n          .. tension 0.9\n          .. (0.75*x_radius,-1.0*y_radius)",
+        "sweep": "sweep_base rotatedaround ((Ox,-y_radius),-15)\n           shifted (Ox-0.75*cosd(-15)*x_radius,Oy-0.75*sind(-15)*y_radius)"
+      },
+      "paths": [
+        {
+          "name": "bar",
+          "path_type": "crossbar",
+          "base_definition": "(Ox, -y_radius - 0.325*pen_height) -- (Ox, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "(-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "bar",
+        "serif"
+      ],
+      "pen_changes": [
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "loz_pen"
+        }
+      ],
+      "uses_reflection": false,
+      "reflection_axis": null,
+      "complexity": 2,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup loz_pen rotated 90;\n  path bar;\n  bar := (Ox, -y_radius - 0.325*pen_height) -- (Ox, y_radius);\n  draw bar;\n\n  pickup loz_pen;\n  path serif;\n  serif := (-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius);\n  draw serif;\n\n  % Define the sweep path (with rotation/shift)\n  path sweep_base, sweep;\n  sweep_base := (-0.75*x_radius,-1.0*y_radius)\n          .. tension 0.9\n          .. (Ox,-1.0*y_radius-0.25*pen_height)\n          .. tension 0.9\n          .. (0.75*x_radius,-1.0*y_radius);\n\n  sweep := sweep_base rotatedaround ((Ox,-y_radius),-15)\n           shifted (Ox-0.75*cosd(-15)*x_radius,Oy-0.75*sind(-15)*y_radius);\n\n  % Draw with rotating pen\n  rotatingdraw(sweep, -15, 0, 20, 0.6);\n\n"
+    },
+    "U10409": {
+      "unicode_codepoint": "U10409",
+      "unicode_name": "DESERET CAPITAL LETTER SHORT AH",
+      "fig_number": 409,
+      "filename": "calyptapis/src/letters/U10409.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "bar": "(Ox, -y_radius - 0.325*pen_height) -- (Ox, y_radius)",
+        "serif": "(-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius)",
+        "sweep_base": "(-0.375*x_radius,-1.0*y_radius)\n           .. tension 1.3\n           .. (Ox,-1.0*y_radius-0.25*pen_height)\n           .. tension 1.3\n           .. (0.75*x_radius,-1.0*y_radius)",
+        "bara": "sweep_base rotatedaround ((Ox,-y_radius),-15)\n          shifted (Ox-0.75*cosd(-15)*x_radius,Oy-0.75*sind(-15)*y_radius)",
+        "barb": "sweep_base rotatedaround ((Ox,-y_radius),-15)\n          shifted (Ox-1.75*cosd(-15)*x_radius,Oy-0.75*sind(-15)*y_radius)",
+        "vert": "point 0 of bara -- point 2 of barb"
+      },
+      "paths": [
+        {
+          "name": "bar",
+          "path_type": "crossbar",
+          "base_definition": "(Ox, -y_radius - 0.325*pen_height) -- (Ox, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "(-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "vert",
+          "path_type": "straight_segment",
+          "base_definition": "point 0 of bara -- point 2 of barb",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "bar",
+        "serif"
+      ],
+      "pen_changes": [
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "loz_pen"
+        }
+      ],
+      "uses_reflection": false,
+      "reflection_axis": null,
+      "complexity": 3,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup loz_pen rotated 90;\n  path bar;\n  bar := (Ox, -y_radius - 0.325*pen_height) -- (Ox, y_radius);\n  draw bar;\n\n  pickup loz_pen;\n  path serif;\n  serif := (-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius);\n  draw serif;\n\n  % Define sweep paths\n  path sweep_base, bara, barb;\n  sweep_base := (-0.375*x_radius,-1.0*y_radius)\n           .. tension 1.3\n           .. (Ox,-1.0*y_radius-0.25*pen_height)\n           .. tension 1.3\n           .. (0.75*x_radius,-1.0*y_radius);\n\n  bara := sweep_base rotatedaround ((Ox,-y_radius),-15)\n          shifted (Ox-0.75*cosd(-15)*x_radius,Oy-0.75*sind(-15)*y_radius);\n\n  barb := sweep_base rotatedaround ((Ox,-y_radius),-15)\n          shifted (Ox-1.75*cosd(-15)*x_radius,Oy-0.75*sind(-15)*y_radius);\n\n  % Draw sweeps with rotating pen\n  rotatingdraw(bara, -15, 0, 20, 0.6);\n  rotatingdraw(barb, -15, 0, 20, 0.6);\n\n  path vert;\n  vert := point 0 of bara -- point 2 of barb;\n  rotatingdraw(vert, -15, 0, 10, 0.6);\n\n"
+    },
+    "U1040A": {
+      "unicode_codepoint": "U1040A",
+      "unicode_name": "DESERET CAPITAL LETTER LONG AH",
+      "fig_number": 4000,
+      "filename": "calyptapis/src/letters/U1040a.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "bar": "(Ox, -y_radius) -- (Ox, y_radius)",
+        "serif": "(-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius)",
+        "arc": "halfcircle scaled (1.5*x_radius) shifted (-0.75*x_radius, -y_radius)",
+        "currentpicture": "currentpicture rotated 180"
+      },
+      "paths": [
+        {
+          "name": "bar",
+          "path_type": "crossbar",
+          "base_definition": "(Ox, -y_radius) -- (Ox, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "(-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "arc",
+          "path_type": "unknown",
+          "base_definition": "halfcircle scaled (1.5*x_radius) shifted (-0.75*x_radius, -y_radius)",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "bar",
+        "serif",
+        "serif shifted (0, -2.0 * y_radius)",
+        "(-1.5*x_radius, -1.0*y_radius-0.375*pen_height)\n       -- (-1.5*x_radius, -0.96*y_radius)",
+        "arc cutbefore point 0 of arc cutafter point 3.925 of arc",
+        "currentpicture"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "thin_pen"
+        }
+      ],
+      "uses_reflection": false,
+      "reflection_axis": null,
+      "complexity": 3,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n\n  path bar;\n  bar := (Ox, -y_radius) -- (Ox, y_radius);\n\n  draw bar;\n\n  pickup loz_pen;\n\n  path serif;\n  serif := (-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius);\n  draw serif;\n  draw serif shifted (0, -2.0 * y_radius);\n\n  pickup loz_pen rotated 90;\n  draw (-1.5*x_radius, -1.0*y_radius-0.375*pen_height)\n       -- (-1.5*x_radius, -0.96*y_radius);\n\n  pickup thin_pen;\n  path arc;\n  arc := halfcircle scaled (1.5*x_radius) shifted (-0.75*x_radius, -y_radius);\n\n  draw arc cutbefore point 0 of arc cutafter point 3.925 of arc;\n\n  currentpicture := currentpicture rotated 180;\n  draw currentpicture;\n"
+    },
+    "U1040B": {
+      "unicode_codepoint": "U1040B",
+      "unicode_name": "DESERET CAPITAL LETTER LONG AH",
+      "fig_number": 4001,
+      "filename": "calyptapis/src/letters/U1040b.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "bar": "(Ox, -y_radius) -- (Ox, (1/3)*y_radius)",
+        "serif": "(-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius)",
+        "outer_circle": "(Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-x_radius, Oy){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){up}\n                  .. tension 0.9\n                  .. cycle"
+      },
+      "paths": [
+        {
+          "name": "bar",
+          "path_type": "crossbar",
+          "base_definition": "(Ox, -y_radius) -- (Ox, (1/3)*y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "(-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "outer_circle",
+          "path_type": "closed_path",
+          "base_definition": "(Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-x_radius, Oy){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){up}\n                  .. tension 0.9\n                  .. cycle",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "bar",
+        "serif shifted (0, -2.0 * y_radius)",
+        "outer_circle scaled (2/3) shifted (2/3*x_radius, 1/3*y_radius)"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "thin_pen"
+        }
+      ],
+      "uses_reflection": false,
+      "reflection_axis": null,
+      "complexity": 3,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n\n  path bar;\n  bar := (Ox, -y_radius) -- (Ox, (1/3)*y_radius);\n\n  draw bar;\n\n  pickup loz_pen;\n\n  path serif;\n  serif := (-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius);\n  draw serif shifted (0, -2.0 * y_radius);\n\n  pickup thin_pen;\n\n  path outer_circle;\n  outer_circle := (Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-x_radius, Oy){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){up}\n                  .. tension 0.9\n                  .. cycle;\n\n  draw outer_circle scaled (2/3) shifted (2/3*x_radius, 1/3*y_radius);\n\n"
+    },
+    "U1040C": {
+      "unicode_codepoint": "U1040C",
+      "unicode_name": "DESERET CAPITAL LETTER LONG O",
+      "fig_number": 4002,
+      "filename": "calyptapis/src/letters/U1040c.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "bar": "(Ox, -y_radius) -- (Ox, y_radius)",
+        "serif": "(0.75x_radius-(1/3)*x_radius, y_radius)\n          -- (0.75x_radius+(1/3)*x_radius, y_radius)",
+        "swirl": "(point 0.75 of bar){up}\n           .. tension 0.9\n           .. (-0.5x_radius, y_radius){left}\n           .. tension 0.9\n           .. (-x_radius, 0.5y_radius){down}\n           .. tension 0.9\n           .. (Ox, Oy){right}\n           .. tension 0.9\n           .. (0.75x_radius, 0.65y_radius){up}\n           -- (0.75x_radius, y_radius)",
+        "currentpicture": "currentpicture reflectedabout((0,0),(0,1))"
+      },
+      "paths": [
+        {
+          "name": "bar",
+          "path_type": "crossbar",
+          "base_definition": "(Ox, -y_radius) -- (Ox, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "(-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "swirl",
+          "path_type": "straight_segment",
+          "base_definition": "(point 0.75 of bar){up}\n           .. tension 0.9\n           .. (-0.5x_radius, y_radius){left}\n           .. tension 0.9\n           .. (-x_radius, 0.5y_radius){down}\n           .. tension 0.9\n           .. (Ox, Oy){right}\n           .. tension 0.9\n           .. (0.75x_radius, 0.65y_radius){up}\n           -- (0.75x_radius, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "subpath(0,0.75) of bar",
+        "serif shifted (0, -2.0 * y_radius)",
+        "swirl",
+        "serif",
+        "currentpicture"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        }
+      ],
+      "uses_reflection": true,
+      "reflection_axis": "vertical",
+      "complexity": 3,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n  path bar;\n  bar := (Ox, -y_radius) -- (Ox, y_radius);\n  draw subpath(0,0.75) of bar;\n\n  pickup loz_pen;\n  path serif;\n  serif := (-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius);\n  draw serif shifted (0, -2.0 * y_radius);\n\n  pickup thin_pen;\n  path swirl;\n  swirl := (point 0.75 of bar){up}\n           .. tension 0.9\n           .. (-0.5x_radius, y_radius){left}\n           .. tension 0.9\n           .. (-x_radius, 0.5y_radius){down}\n           .. tension 0.9\n           .. (Ox, Oy){right}\n           .. tension 0.9\n           .. (0.75x_radius, 0.65y_radius){up}\n           -- (0.75x_radius, y_radius);\n  draw swirl;\n\n  pickup loz_pen;\n  serif := (0.75x_radius-(1/3)*x_radius, y_radius)\n          -- (0.75x_radius+(1/3)*x_radius, y_radius);\n  draw serif;\n\n  currentpicture := currentpicture reflectedabout((0,0),(0,1));\n\n  draw currentpicture;\n\n"
+    },
+    "U1040D": {
+      "unicode_codepoint": "U1040D",
+      "unicode_name": "DESERET CAPITAL LETTER SHORT O",
+      "fig_number": 4003,
+      "filename": "calyptapis/src/letters/U1040d.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "upper_loop": "upper_loop scaled (2/3) shifted (2/3*x_radius, 1/3*y_radius)",
+        "lower_loop": "lower_loop scaled (2/3) shifted (2/3*x_radius, -1/3*y_radius)",
+        "loop": "(point 1 of upper_loop){down}\n          .. tension 0.9\n          .. (x_radius, 0.4*y_radius){right}",
+        "serif": "(x_radius, 0.4*y_radius)\n          -- ((5/3)*x_radius, 0.4*y_radius)"
+      },
+      "paths": [
+        {
+          "name": "upper_loop",
+          "path_type": "loop",
+          "base_definition": "(x_radius, (1/2)*y_radius){up}\n                .. tension 0.9\n                .. (Ox, y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){down}\n                .. tension 0.9\n                .. (Ox, -.5*y_radius){right}",
+          "transformations": [
+            {
+              "type": "scaled",
+              "value": "2/3"
+            },
+            {
+              "type": "shifted",
+              "value": "2/3*x_radius, 1/3*y_radius"
+            }
+          ],
+          "pen_used": null
+        },
+        {
+          "name": "lower_loop",
+          "path_type": "loop",
+          "base_definition": "(x_radius, (-1/2)*y_radius){down}\n                .. tension 0.9\n                .. (Ox, -y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){up}\n                .. tension 0.9\n                .. (Ox, .5*y_radius){right}",
+          "transformations": [
+            {
+              "type": "scaled",
+              "value": "2/3"
+            },
+            {
+              "type": "shifted",
+              "value": "2/3*x_radius, -1/3*y_radius"
+            }
+          ],
+          "pen_used": null
+        },
+        {
+          "name": "loop",
+          "path_type": "loop",
+          "base_definition": "(x_radius, (1/2)*y_radius){up}\n                .. tension 0.9\n                .. (Ox, y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){down}\n                .. tension 0.9\n                .. (Ox, -.5*y_radius){right}",
+          "transformations": [
+            {
+              "type": "scaled",
+              "value": "2/3"
+            },
+            {
+              "type": "shifted",
+              "value": "2/3*x_radius, 1/3*y_radius"
+            },
+            {
+              "type": "scaled",
+              "value": "2/3"
+            },
+            {
+              "type": "shifted",
+              "value": "2/3*x_radius, -1/3*y_radius"
+            }
+          ],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "(x_radius, 0.4*y_radius)\n          -- ((5/3)*x_radius, 0.4*y_radius)",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "upper_loop",
+        "lower_loop",
+        "point 0 of upper_loop -- point 0 of lower_loop",
+        "loop",
+        "serif"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        }
+      ],
+      "uses_reflection": false,
+      "reflection_axis": null,
+      "complexity": 4,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n\n  path upper_loop;\n  upper_loop := (x_radius, (1/2)*y_radius){up}\n                .. tension 0.9\n                .. (Ox, y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){down}\n                .. tension 0.9\n                .. (Ox, -.5*y_radius){right}\n                ;\n  upper_loop := upper_loop scaled (2/3) shifted (2/3*x_radius, 1/3*y_radius);\n  draw upper_loop;\n\n  path lower_loop;\n  lower_loop := (x_radius, (-1/2)*y_radius){down}\n                .. tension 0.9\n                .. (Ox, -y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){up}\n                .. tension 0.9\n                .. (Ox, .5*y_radius){right}\n                ;\n  lower_loop := lower_loop scaled (2/3) shifted (2/3*x_radius, -1/3*y_radius);\n  draw lower_loop;\n\n  pickup loz_pen rotated 90;\n  draw point 0 of upper_loop -- point 0 of lower_loop;\n\n  pickup thin_pen;\n  path loop;\n  loop := (point 1 of upper_loop){down}\n          .. tension 0.9\n          .. (x_radius, 0.4*y_radius){right};\n  draw loop;\n\n  pickup loz_pen;\n  path serif;\n  serif := (x_radius, 0.4*y_radius)\n          -- ((5/3)*x_radius, 0.4*y_radius);\n  draw serif;\n"
+    },
+    "U1040E": {
+      "unicode_codepoint": "U1040E",
+      "unicode_name": "DESERET CAPITAL LETTER OW",
+      "fig_number": 4004,
+      "filename": "calyptapis/src/letters/U1040e.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "lower_circle": "lower_circle scaled (2/3) shifted (2/3*x_radius, -1/3*y_radius)",
+        "bar": "(Ox, y_radius)\n         -- (point 1 of lower_circle)",
+        "serif": "(-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius)"
+      },
+      "paths": [
+        {
+          "name": "lower_circle",
+          "path_type": "closed_path",
+          "base_definition": "(Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-x_radius, Oy){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){up}\n                  .. tension 0.9\n                  .. cycle",
+          "transformations": [
+            {
+              "type": "scaled",
+              "value": "2/3"
+            },
+            {
+              "type": "shifted",
+              "value": "2/3*x_radius, -1/3*y_radius"
+            }
+          ],
+          "pen_used": null
+        },
+        {
+          "name": "bar",
+          "path_type": "crossbar",
+          "base_definition": "(Ox, y_radius)\n         -- (point 1 of lower_circle)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "(-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "subpath (1, 3) of lower_circle",
+        "subpath (1, 3) of lower_circle shifted ((4/3)*x_radius,0)",
+        "bar",
+        "bar shifted ((4/3)*x_radius,0)",
+        "bar shifted ((8/3)*x_radius,0)",
+        "serif",
+        "serif shifted ((4/3)*x_radius,0)",
+        "serif shifted ((8/3)*x_radius,0)"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "loz_pen"
+        }
+      ],
+      "uses_reflection": false,
+      "reflection_axis": null,
+      "complexity": 3,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n\n  path lower_circle;\n  lower_circle := (Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-x_radius, Oy){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){up}\n                  .. tension 0.9\n                  .. cycle;\n\n  lower_circle := lower_circle scaled (2/3) shifted (2/3*x_radius, -1/3*y_radius);\n  draw subpath (1, 3) of lower_circle;\n  draw subpath (1, 3) of lower_circle shifted ((4/3)*x_radius,0);\n\n  pickup thin_pen;\n\n  pickup loz_pen rotated 90;\n  path bar;\n  bar := (Ox, y_radius)\n         -- (point 1 of lower_circle);\n  draw bar;\n  draw bar shifted ((4/3)*x_radius,0);\n  draw bar shifted ((8/3)*x_radius,0);\n\n  pickup loz_pen;\n  path serif;\n  serif := (-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius);\n  draw serif;\n  draw serif shifted ((4/3)*x_radius,0);\n  draw serif shifted ((8/3)*x_radius,0);\n"
+    },
+    "U1040F": {
+      "unicode_codepoint": "U1040F",
+      "unicode_name": "DESERET CAPITAL LETTER WU",
+      "fig_number": 4005,
+      "filename": "calyptapis/src/letters/U1040f.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "bar": "(Ox, -y_radius)\n         -- (-0.5x_radius, Oy){-((Ox,-y_radius)-(-0.5x_radius,Oy))}\n         .. (point 2 of loop){left}",
+        "serif": "((2/3) * x_radius, y_radius)\n          -- ((4/3) * x_radius, y_radius)",
+        "loop": "fullcircle scaled 0.75x_radius shifted (-1.25x_radius, 0.625y_radius)",
+        "cross": "point 6 of loop\n           .. point 6 of loop + (2x_radius, 0){right}\n           .. tension 0.9\n           .. point 6 of loop + (2.5x_radius, -0.25y_radius)"
+      },
+      "paths": [
+        {
+          "name": "bar",
+          "path_type": "crossbar",
+          "base_definition": "(x_radius, y_radius) -- (Ox, -y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "((2/3) * x_radius, y_radius)\n          -- ((4/3) * x_radius, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "loop",
+          "path_type": "loop",
+          "base_definition": "fullcircle scaled 0.75x_radius shifted (-1.25x_radius, 0.625y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "cross",
+          "path_type": "curved_path",
+          "base_definition": "point 6 of loop\n           .. point 6 of loop + (2x_radius, 0){right}\n           .. tension 0.9\n           .. point 6 of loop + (2.5x_radius, -0.25y_radius)",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "bar",
+        "serif",
+        "reverse loop cutafter point 2 of loop cutbefore point 6 of loop",
+        "bar",
+        "cross cutafter point 1.75 of cross cutbefore point 0 of cross",
+        "cross cutafter point 2 of cross cutbefore point 1 of cross"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        }
+      ],
+      "uses_reflection": false,
+      "reflection_axis": null,
+      "complexity": 4,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n\n  path bar;\n  bar := (x_radius, y_radius) -- (Ox, -y_radius);\n\n  draw bar;\n\n  pickup loz_pen;\n\n  path serif;\n  serif := ((2/3) * x_radius, y_radius)\n          -- ((4/3) * x_radius, y_radius);\n  draw serif;\n\n  pickup thin_pen;\n  path loop;\n  loop := fullcircle scaled 0.75x_radius shifted (-1.25x_radius, 0.625y_radius);\n  draw reverse loop cutafter point 2 of loop cutbefore point 6 of loop;\n\n  pickup thin_pen;\n  bar := (Ox, -y_radius)\n         -- (-0.5x_radius, Oy){-((Ox,-y_radius)-(-0.5x_radius,Oy))}\n         .. (point 2 of loop){left};\n  draw bar;\n\n  pickup thin_pen;\n  path cross;\n  cross := point 6 of loop\n           .. point 6 of loop + (2x_radius, 0){right}\n           .. tension 0.9\n           .. point 6 of loop + (2.5x_radius, -0.25y_radius);\n  draw cross cutafter point 1.75 of cross cutbefore point 0 of cross;\n\n  pickup loz_pen rotated -45;\n  draw cross cutafter point 2 of cross cutbefore point 1 of cross;\n\n"
+    },
+    "U10410": {
+      "unicode_codepoint": "U10410",
+      "unicode_name": "DESERET CAPITAL LETTER AY",
+      "fig_number": 410,
+      "filename": "calyptapis/src/letters/U10410.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "bar": "(Ox, -y_radius) -- (Ox, y_radius)",
+        "serif": "(0.75x_radius, 0.65y_radius)\n          -- (0.75x_radius, y_radius+0.125pen_height)",
+        "swirl": "(point 0.75 of bar){up}\n          .. tension 0.9\n          .. (-0.5x_radius, y_radius){left}\n          .. tension 0.9\n          .. (-x_radius, 0.5y_radius){down}\n          .. tension 0.9\n          .. (Ox, Oy){right}\n          .. tension 0.9\n          .. (0.75x_radius, 0.65y_radius){up}",
+        "currentpicture": "currentpicture reflectedabout((0,0),(1,0))"
+      },
+      "paths": [
+        {
+          "name": "bar",
+          "path_type": "crossbar",
+          "base_definition": "(Ox, -y_radius) -- (Ox, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "(-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "swirl",
+          "path_type": "curved_path",
+          "base_definition": "(point 0.75 of bar){up}\n          .. tension 0.9\n          .. (-0.5x_radius, y_radius){left}\n          .. tension 0.9\n          .. (-x_radius, 0.5y_radius){down}\n          .. tension 0.9\n          .. (Ox, Oy){right}\n          .. tension 0.9\n          .. (0.75x_radius, 0.65y_radius){up}",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "subpath(0,0.75) of bar",
+        "serif shifted (0, -2.0 * y_radius)",
+        "swirl",
+        "serif",
+        "currentpicture"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        }
+      ],
+      "uses_reflection": true,
+      "reflection_axis": "horizontal",
+      "complexity": 3,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n  path bar;\n  bar := (Ox, -y_radius) -- (Ox, y_radius);\n  draw subpath(0,0.75) of bar;\n\n  pickup loz_pen;\n  path serif;\n  serif := (-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius);\n  draw serif shifted (0, -2.0 * y_radius);\n\n  pickup thin_pen;\n  path swirl;\n  swirl := (point 0.75 of bar){up}\n          .. tension 0.9\n          .. (-0.5x_radius, y_radius){left}\n          .. tension 0.9\n          .. (-x_radius, 0.5y_radius){down}\n          .. tension 0.9\n          .. (Ox, Oy){right}\n          .. tension 0.9\n          .. (0.75x_radius, 0.65y_radius){up};\n  draw swirl;\n\n  pickup loz_pen rotated 90;\n  serif := (0.75x_radius, 0.65y_radius)\n          -- (0.75x_radius, y_radius+0.125pen_height);\n  draw serif;\n\n  currentpicture := currentpicture reflectedabout((0,0),(1,0));\n\n  draw currentpicture;\n\n"
+    },
+    "U10411": {
+      "unicode_codepoint": "U10411",
+      "unicode_name": "DESERET CAPITAL LETTER BEE",
+      "fig_number": 411,
+      "filename": "calyptapis/src/letters/U10411.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "bar": "(Ox, -y_radius) -- (Ox, y_radius)",
+        "lower_serif": "(-(1/3) * x_radius, -y_radius)\n                 -- ((1/3) * x_radius, -y_radius)",
+        "beam": "((1/3) * x_radius, y_radius)\n          -- (-(4/3) * x_radius, y_radius)",
+        "serif": "(-(4/3)*x_radius, y_radius){down}\n          .. tension 0.9\n          .. (-(4/3)*x_radius, 0.75*y_radius)"
+      },
+      "paths": [
+        {
+          "name": "bar",
+          "path_type": "crossbar",
+          "base_definition": "(Ox, -y_radius) -- (Ox, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "lower_serif",
+          "path_type": "serif",
+          "base_definition": "(-(1/3) * x_radius, -y_radius)\n                 -- ((1/3) * x_radius, -y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "beam",
+          "path_type": "straight_segment",
+          "base_definition": "((1/3) * x_radius, y_radius)\n          -- (-(4/3) * x_radius, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "(-(1/3) * x_radius, -y_radius)\n                 -- ((1/3) * x_radius, -y_radius)",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "bar",
+        "lower_serif",
+        "beam",
+        "serif"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "loz_pen"
+        }
+      ],
+      "uses_reflection": false,
+      "reflection_axis": null,
+      "complexity": 4,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n\n  path bar;\n  bar := (Ox, -y_radius) -- (Ox, y_radius);\n\n  draw bar;\n\n  pickup loz_pen;\n  path lower_serif;\n  lower_serif := (-(1/3) * x_radius, -y_radius)\n                 -- ((1/3) * x_radius, -y_radius);\n  draw lower_serif;\n\n  pickup loz_pen;\n  path beam;\n  beam := ((1/3) * x_radius, y_radius)\n          -- (-(4/3) * x_radius, y_radius);\n  draw beam;\n\n  pickup loz_pen rotated -90;\n  path serif;\n  serif := (-(4/3)*x_radius, y_radius){down}\n          .. tension 0.9\n          .. (-(4/3)*x_radius, 0.75*y_radius);\n  draw serif;\n"
+    },
+    "U10412": {
+      "unicode_codepoint": "U10412",
+      "unicode_name": "DESERET CAPITAL LETTER PEE",
+      "fig_number": 412,
+      "filename": "calyptapis/src/letters/U10412.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "upper_loop": "upper_loop scaled (2/3) shifted (2/3*x_radius, 1/3*y_radius)",
+        "lower_loop": "lower_loop scaled (2/3) shifted (2/3*x_radius, -1/3*y_radius)",
+        "serif": "(xpart point 0 of upper_loop, y_radius)\n           -- (xpart point 0 of upper_loop + (1/3)*x_radius, y_radius)"
+      },
+      "paths": [
+        {
+          "name": "upper_loop",
+          "path_type": "loop",
+          "base_definition": "(x_radius, (1/2)*y_radius){up}\n                .. tension 0.9\n                .. (Ox, y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){down}\n                .. tension 0.9\n                .. (Ox, -.5*y_radius){right}",
+          "transformations": [
+            {
+              "type": "scaled",
+              "value": "2/3"
+            },
+            {
+              "type": "shifted",
+              "value": "2/3*x_radius, 1/3*y_radius"
+            }
+          ],
+          "pen_used": null
+        },
+        {
+          "name": "lower_loop",
+          "path_type": "loop",
+          "base_definition": "(x_radius, (-1/2)*y_radius){down}\n                .. tension 0.9\n                .. (Ox, -y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){up}\n                .. tension 0.9\n                .. (Ox, .5*y_radius){right}",
+          "transformations": [
+            {
+              "type": "scaled",
+              "value": "2/3"
+            },
+            {
+              "type": "shifted",
+              "value": "2/3*x_radius, -1/3*y_radius"
+            }
+          ],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "(0.75x_radius, (1/3)*y_radius)\n          -- (0.75x_radius, (-1/3)*y_radius)",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "upper_loop",
+        "lower_loop",
+        "serif",
+        "(xpart point 0 of upper_loop, y_radius+0.375*pen_height)\n       -- (xpart point 0 of upper_loop, -y_radius-0.375*pen_height)",
+        "serif",
+        "serif shifted (0, -2*y_radius)"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "loz_pen"
+        }
+      ],
+      "uses_reflection": false,
+      "reflection_axis": null,
+      "complexity": 3,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n\n  path upper_loop;\n  upper_loop := (x_radius, (1/2)*y_radius){up}\n                .. tension 0.9\n                .. (Ox, y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){down}\n                .. tension 0.9\n                .. (Ox, -.5*y_radius){right}\n                ;\n  upper_loop := upper_loop scaled (2/3) shifted (2/3*x_radius, 1/3*y_radius);\n  draw upper_loop;\n\n  path lower_loop;\n  lower_loop := (x_radius, (-1/2)*y_radius){down}\n                .. tension 0.9\n                .. (Ox, -y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){up}\n                .. tension 0.9\n                .. (Ox, .5*y_radius){right}\n                ;\n  lower_loop := lower_loop scaled (2/3) shifted (2/3*x_radius, -1/3*y_radius);\n  draw lower_loop;\n\n  pickup loz_pen rotated 90;\n  path serif;\n  serif := (0.75x_radius, (1/3)*y_radius)\n          -- (0.75x_radius, (-1/3)*y_radius);\n  draw serif;\n\n  pickup loz_pen rotated 90;\n  draw (xpart point 0 of upper_loop, y_radius+0.375*pen_height)\n       -- (xpart point 0 of upper_loop, -y_radius-0.375*pen_height);\n\n  pickup loz_pen;\n  serif := (xpart point 0 of upper_loop, y_radius)\n           -- (xpart point 0 of upper_loop + (1/3)*x_radius, y_radius);\n  draw serif;\n  draw serif shifted (0, -2*y_radius);\n\n"
+    },
+    "U10413": {
+      "unicode_codepoint": "U10413",
+      "unicode_name": "DESERET CAPITAL LETTER TEE",
+      "fig_number": 413,
+      "filename": "calyptapis/src/letters/U10413.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "upper_loop": "upper_loop scaled (2/3) shifted (2/3*x_radius, 1/3*y_radius)",
+        "serif": "(xpart point 0 of upper_loop, y_radius)\n          -- (xpart point 0 of upper_loop, (2/3)*y_radius)",
+        "lower_serif": "(-(1/3) * x_radius, -y_radius)\n                 -- ((1/3) * x_radius, -y_radius)",
+        "currentpicture": "currentpicture reflectedabout((0,0),(0,y_radius))"
+      },
+      "paths": [
+        {
+          "name": "upper_loop",
+          "path_type": "loop",
+          "base_definition": "(x_radius, (1/2)*y_radius){up}\n                .. tension 0.9\n                .. (Ox, y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){down}\n                .. tension 0.9\n                .. (-x_radius, -2y_radius){down}",
+          "transformations": [
+            {
+              "type": "scaled",
+              "value": "2/3"
+            },
+            {
+              "type": "shifted",
+              "value": "2/3*x_radius, 1/3*y_radius"
+            }
+          ],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "(xpart point 0 of upper_loop, y_radius)\n          -- (xpart point 0 of upper_loop, (2/3)*y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "lower_serif",
+          "path_type": "serif",
+          "base_definition": "(-(1/3) * x_radius, -y_radius)\n                 -- ((1/3) * x_radius, -y_radius)",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "upper_loop",
+        "serif",
+        "lower_serif",
+        "currentpicture"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "loz_pen"
+        }
+      ],
+      "uses_reflection": true,
+      "reflection_axis": "custom(0,0 to 0,y_radius)",
+      "complexity": 3,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n\n  path upper_loop;\n  upper_loop := (x_radius, (1/2)*y_radius){up}\n                .. tension 0.9\n                .. (Ox, y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){down}\n                .. tension 0.9\n                .. (-x_radius, -2y_radius){down}\n\n                ;\n  upper_loop := upper_loop scaled (2/3) shifted (2/3*x_radius, 1/3*y_radius);\n  draw upper_loop;\n\n  pickup loz_pen rotated 90;\n  path serif;\n  serif := (xpart point 0 of upper_loop, y_radius)\n          -- (xpart point 0 of upper_loop, (2/3)*y_radius);\n  draw serif;\n\n  pickup loz_pen;\n  path lower_serif;\n  lower_serif := (-(1/3) * x_radius, -y_radius)\n                 -- ((1/3) * x_radius, -y_radius);\n  draw lower_serif;\n\n  currentpicture := currentpicture reflectedabout((0,0),(0,y_radius));\n\n  draw currentpicture;\n\n"
+    },
+    "U10414": {
+      "unicode_codepoint": "U10414",
+      "unicode_name": "DESERET CAPITAL LETTER DEE",
+      "fig_number": 414,
+      "filename": "calyptapis/src/letters/U10414.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "spacer": "(1/3)*x_radius",
+        "upper_loop": "upper_loop scaled (2/3) shifted (2/3*x_radius, 1/3*y_radius)",
+        "serif": "(-(1/3) * x_radius, (2/5)*y_radius)\n  -- ((1/3) * x_radius, (2/5)*y_radius)",
+        "loop": "(point 1 of upper_loop){down}\n          .. tension 0.9\n          .. (x_radius,(2/5)*y_radius){right}"
+      },
+      "paths": [
+        {
+          "name": "upper_loop",
+          "path_type": "loop",
+          "base_definition": "(x_radius, (1/2)*y_radius){up}\n                .. tension 0.9\n                .. (Ox, y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){down}\n                .. tension 0.9\n                .. (-x_radius, -1.0*y_radius){down}\n                .. tension 0.9\n                .. (Ox, -2y_radius){right}\n                .. tension 0.9\n                .. (x_radius, (-3/2)*y_radius){up}",
+          "transformations": [
+            {
+              "type": "scaled",
+              "value": "2/3"
+            },
+            {
+              "type": "shifted",
+              "value": "2/3*x_radius, 1/3*y_radius"
+            }
+          ],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "(xpart point 0 of upper_loop, y_radius)\n          -- (xpart point 0 of upper_loop + spacer, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "(xpart point 0 of upper_loop, y_radius)\n          -- (xpart point 0 of upper_loop + spacer, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "loop",
+          "path_type": "loop",
+          "base_definition": "(x_radius, (1/2)*y_radius){up}\n                .. tension 0.9\n                .. (Ox, y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){down}\n                .. tension 0.9\n                .. (-x_radius, -1.0*y_radius){down}\n                .. tension 0.9\n                .. (Ox, -2y_radius){right}\n                .. tension 0.9\n                .. (x_radius, (-3/2)*y_radius){up}",
+          "transformations": [
+            {
+              "type": "scaled",
+              "value": "2/3"
+            },
+            {
+              "type": "shifted",
+              "value": "2/3*x_radius, 1/3*y_radius"
+            }
+          ],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "upper_loop",
+        "(xpart point 0 of upper_loop, y_radius + 0.375*pen_height)\n      -- (xpart point 0 of upper_loop, -y_radius - 0.375*pen_height)",
+        "serif",
+        "serif shifted (0, -2*y_radius)",
+        "serif shifted ((4/3)*x_radius,0)",
+        "loop"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "thin_pen"
+        }
+      ],
+      "uses_reflection": false,
+      "reflection_axis": null,
+      "complexity": 4,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n\n  path upper_loop;\n  upper_loop := (x_radius, (1/2)*y_radius){up}\n                .. tension 0.9\n                .. (Ox, y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){down}\n                .. tension 0.9\n                .. (-x_radius, -1.0*y_radius){down}\n                .. tension 0.9\n                .. (Ox, -2y_radius){right}\n                .. tension 0.9\n                .. (x_radius, (-3/2)*y_radius){up}\n                ;\n  upper_loop := upper_loop scaled (2/3) shifted (2/3*x_radius, 1/3*y_radius);\n  draw upper_loop;\n\n  numeric spacer;\n  spacer := (1/3)*x_radius;\n\n  % Vertical stem with serifs on right side\n  % Use absolute y positions (y_radius/-y_radius) like 412 and 4011\n  pickup loz_pen rotated 90;\n  draw (xpart point 0 of upper_loop, y_radius + 0.375*pen_height)\n      -- (xpart point 0 of upper_loop, -y_radius - 0.375*pen_height);\n\n  pickup loz_pen;\n  path serif;\n  serif := (xpart point 0 of upper_loop, y_radius)\n          -- (xpart point 0 of upper_loop + spacer, y_radius);\n  draw serif;\n  draw serif shifted (0, -2*y_radius);\n\n  pickup loz_pen;\n  path serif;\n  serif := (-(1/3) * x_radius, (2/5)*y_radius)\n  -- ((1/3) * x_radius, (2/5)*y_radius);\n  draw serif shifted ((4/3)*x_radius,0);\n\n  pickup thin_pen;\n  path loop;\n  loop := (point 1 of upper_loop){down}\n          .. tension 0.9\n          .. (x_radius,(2/5)*y_radius){right};\n  draw loop;\n\n"
+    },
+    "U10415": {
+      "unicode_codepoint": "U10415",
+      "unicode_name": "DESERET CAPITAL LETTER ZEE",
+      "fig_number": 415,
+      "filename": "calyptapis/src/letters/U10415.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "upper_loop": "upper_loop scaled (2/3) shifted (2/3*x_radius, 1/3*y_radius)",
+        "serif": "point 6 of upper_loop + (0, 0.5*pen_height)\n          -- point 6 of upper_loop"
+      },
+      "paths": [
+        {
+          "name": "upper_loop",
+          "path_type": "loop",
+          "base_definition": "(x_radius, (1/2)*y_radius){up}\n                .. tension 0.9\n                .. (Ox, y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){down}\n                .. tension 0.9\n                .. (-x_radius, -1.0*y_radius){down}\n                .. tension 0.9\n                .. (Ox, -2y_radius){right}\n                .. tension 0.9\n                .. (x_radius, (-3/2)*y_radius){up}",
+          "transformations": [
+            {
+              "type": "scaled",
+              "value": "2/3"
+            },
+            {
+              "type": "shifted",
+              "value": "2/3*x_radius, 1/3*y_radius"
+            }
+          ],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "(xpart point 0 of upper_loop, y_radius+0.5*pen_height)\n           -- (xpart point 0 of upper_loop, (2/3)*y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "(xpart point 0 of upper_loop, y_radius+0.5*pen_height)\n           -- (xpart point 0 of upper_loop, (2/3)*y_radius)",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "upper_loop",
+        "serif",
+        "serif"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "loz_pen"
+        }
+      ],
+      "uses_reflection": false,
+      "reflection_axis": null,
+      "complexity": 3,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n\n  path upper_loop;\n  upper_loop := (x_radius, (1/2)*y_radius){up}\n                .. tension 0.9\n                .. (Ox, y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){down}\n                .. tension 0.9\n                .. (-x_radius, -1.0*y_radius){down}\n                .. tension 0.9\n                .. (Ox, -2y_radius){right}\n                .. tension 0.9\n                .. (x_radius, (-3/2)*y_radius){up}\n                ;\n  upper_loop := upper_loop scaled (2/3) shifted (2/3*x_radius, 1/3*y_radius);\n  draw upper_loop;\n\n  pickup loz_pen rotated 90;\n  path serif;\n  serif := (xpart point 0 of upper_loop, y_radius+0.5*pen_height)\n           -- (xpart point 0 of upper_loop, (2/3)*y_radius);\n  draw serif;\n\n  pickup loz_pen rotated 90;\n  path serif;\n  serif := point 6 of upper_loop + (0, 0.5*pen_height)\n          -- point 6 of upper_loop;\n  draw serif;\n\n"
+    },
+    "U10416": {
+      "unicode_codepoint": "U10416",
+      "unicode_name": "DESERET CAPITAL LETTER ESH",
+      "fig_number": 416,
+      "filename": "calyptapis/src/letters/U10416.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "upper_loop": "upper_loop scaled (2/3) shifted (2/3*x_radius, 1/3*y_radius)",
+        "bar": "(xpart point 4 of upper_loop, -y_radius)\n         -- point 4 of upper_loop",
+        "serif": "(xpart point 0 of upper_loop, y_radius+0.5*pen_height)\n           -- (xpart point 0 of upper_loop, (2/3)*y_radius)"
+      },
+      "paths": [
+        {
+          "name": "upper_loop",
+          "path_type": "loop",
+          "base_definition": "(x_radius, (1/2)*y_radius){up}\n                .. tension 0.9\n                .. (Ox, y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){down}\n                .. tension 0.9\n                .. (Ox, -y_radius){right}\n                .. tension 0.9\n                .. (x_radius, (-1/2)*y_radius){up}",
+          "transformations": [
+            {
+              "type": "scaled",
+              "value": "2/3"
+            },
+            {
+              "type": "shifted",
+              "value": "2/3*x_radius, 1/3*y_radius"
+            }
+          ],
+          "pen_used": null
+        },
+        {
+          "name": "bar",
+          "path_type": "crossbar",
+          "base_definition": "(xpart point 4 of upper_loop, -y_radius)\n         -- point 4 of upper_loop",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "(-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "(-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "upper_loop",
+        "bar",
+        "serif shifted (xpart point 4 of upper_loop, -2.0 * y_radius)",
+        "serif"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "loz_pen"
+        }
+      ],
+      "uses_reflection": false,
+      "reflection_axis": null,
+      "complexity": 4,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n  path upper_loop;\n  upper_loop := (x_radius, (1/2)*y_radius){up}\n                .. tension 0.9\n                .. (Ox, y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){down}\n                .. tension 0.9\n                .. (Ox, -y_radius){right}\n                .. tension 0.9\n                .. (x_radius, (-1/2)*y_radius){up}\n                ;\n  upper_loop := upper_loop scaled (2/3) shifted (2/3*x_radius, 1/3*y_radius);\n  draw upper_loop;\n\n  pickup thin_pen;\n  path bar;\n  bar := (xpart point 4 of upper_loop, -y_radius)\n         -- point 4 of upper_loop;\n  draw bar;\n\n  pickup loz_pen;\n  path serif;\n  serif := (-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius);\n  draw serif shifted (xpart point 4 of upper_loop, -2.0 * y_radius);\n\n  pickup loz_pen rotated 90;\n  path serif;\n  serif := (xpart point 0 of upper_loop, y_radius+0.5*pen_height)\n           -- (xpart point 0 of upper_loop, (2/3)*y_radius);\n  draw serif;\n\n"
+    },
+    "U10417": {
+      "unicode_codepoint": "U10417",
+      "unicode_name": "DESERET CAPITAL LETTER KAY",
+      "fig_number": 417,
+      "filename": "calyptapis/src/letters/U10417.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "lower_circle": "lower_circle scaled (2/3) shifted (2/3*x_radius, -1/3*y_radius)",
+        "bar": "(point 1 of lower_circle){up}\n         .. tension 0.9\n         .. (Ox, Oy)\n         .. tension 0.9\n         .. ((4/3)*x_radius, y_radius){right}\n         .. tension 0.9\n         .. ((8/3)*x_radius, Oy){down}\n         .. tension 0.9\n         .. ((point 1 of lower_circle) shifted ((8/3)*x_radius,0)){down}",
+        "vert": "(point 3 of lower_circle){up}\n          -- (point 3 of lower_circle) shifted (0,(1/3)*y_radius)",
+        "serif": "(-(1/3) * x_radius, Oy)\n        -- ((1/3) * x_radius, Oy)"
+      },
+      "paths": [
+        {
+          "name": "lower_circle",
+          "path_type": "closed_path",
+          "base_definition": "(Ox, y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){down}\n                .. tension 0.9\n                .. (Ox, -y_radius){right}\n                .. tension 0.9\n                .. (x_radius, Oy){up}\n                .. tension 0.9\n                .. cycle",
+          "transformations": [
+            {
+              "type": "scaled",
+              "value": "2/3"
+            },
+            {
+              "type": "shifted",
+              "value": "2/3*x_radius, -1/3*y_radius"
+            }
+          ],
+          "pen_used": null
+        },
+        {
+          "name": "bar",
+          "path_type": "crossbar",
+          "base_definition": "(point 1 of lower_circle){up}\n         .. tension 0.9\n         .. (Ox, Oy)\n         .. tension 0.9\n         .. ((4/3)*x_radius, y_radius){right}\n         .. tension 0.9\n         .. ((8/3)*x_radius, Oy){down}\n         .. tension 0.9\n         .. ((point 1 of lower_circle) shifted ((8/3)*x_radius,0)){down}",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "vert",
+          "path_type": "straight_segment",
+          "base_definition": "(point 3 of lower_circle){up}\n          -- (point 3 of lower_circle) shifted (0,(1/3)*y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "(-(1/3) * x_radius, Oy)\n        -- ((1/3) * x_radius, Oy)",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "subpath (1, 3) of lower_circle",
+        "subpath (1, 3) of lower_circle shifted ((4/3)*x_radius,0)",
+        "bar",
+        "vert",
+        "serif shifted ((4/3)*x_radius,0)"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        }
+      ],
+      "uses_reflection": false,
+      "reflection_axis": null,
+      "complexity": 4,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n\n  path lower_circle;\n  lower_circle := (Ox, y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){down}\n                .. tension 0.9\n                .. (Ox, -y_radius){right}\n                .. tension 0.9\n                .. (x_radius, Oy){up}\n                .. tension 0.9\n                .. cycle;\n\n  lower_circle := lower_circle scaled (2/3) shifted (2/3*x_radius, -1/3*y_radius);\n  draw subpath (1, 3) of lower_circle;\n  draw subpath (1, 3) of lower_circle shifted ((4/3)*x_radius,0);\n\n  pickup thin_pen;\n  path bar;\n  bar := (point 1 of lower_circle){up}\n         .. tension 0.9\n         .. (Ox, Oy)\n         .. tension 0.9\n         .. ((4/3)*x_radius, y_radius){right}\n         .. tension 0.9\n         .. ((8/3)*x_radius, Oy){down}\n         .. tension 0.9\n         .. ((point 1 of lower_circle) shifted ((8/3)*x_radius,0)){down};\n  draw bar;\n\n  pickup thin_pen;\n  path vert;\n  vert := (point 3 of lower_circle){up}\n          -- (point 3 of lower_circle) shifted (0,(1/3)*y_radius);\n  draw vert;\n\n  pickup loz_pen;\n  path serif;\n  serif := (-(1/3) * x_radius, Oy)\n        -- ((1/3) * x_radius, Oy);\n  draw serif shifted ((4/3)*x_radius,0);\n\n"
+    },
+    "U10418": {
+      "unicode_codepoint": "U10418",
+      "unicode_name": "DESERET CAPITAL LETTER GAY",
+      "fig_number": 418,
+      "filename": "calyptapis/src/letters/U10418.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "lower_circle": "lower_circle scaled (2/3) shifted (2/3*x_radius, -1/3*y_radius)",
+        "bar": "(point 1 of lower_circle){up}\n        .. tension 0.9\n        .. (Ox, Oy)\n        .. tension 0.9\n        .. ((4/3)*x_radius, y_radius){right}\n        .. tension 0.9\n        .. ((8/3)*x_radius, Oy){down}\n        .. tension 0.9\n        .. ((point 1 of lower_circle) shifted ((8/3)*x_radius,0)){down}",
+        "serif": "(point 2.875 of bar)\n          -- (point 2.875 of bar)+((1/3)*x_radius,0)",
+        "loop": "(point 2 of bar){down}\n          .. tension 0.9\n          .. (point 2.875 of bar){right}"
+      },
+      "paths": [
+        {
+          "name": "lower_circle",
+          "path_type": "closed_path",
+          "base_definition": "(Ox, y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){down}\n                .. tension 0.9\n                .. (Ox, -y_radius){right}\n                .. tension 0.9\n                .. (x_radius, Oy){up}\n                .. tension 0.9\n                .. cycle",
+          "transformations": [
+            {
+              "type": "scaled",
+              "value": "2/3"
+            },
+            {
+              "type": "shifted",
+              "value": "2/3*x_radius, -1/3*y_radius"
+            }
+          ],
+          "pen_used": null
+        },
+        {
+          "name": "bar",
+          "path_type": "crossbar",
+          "base_definition": "(point 1 of lower_circle){up}\n        .. tension 0.9\n        .. (Ox, Oy)\n        .. tension 0.9\n        .. ((4/3)*x_radius, y_radius){right}\n        .. tension 0.9\n        .. ((8/3)*x_radius, Oy){down}\n        .. tension 0.9\n        .. ((point 1 of lower_circle) shifted ((8/3)*x_radius,0)){down}",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "(-(1/3) * x_radius, (-1/3)*y_radius)\n  -- ((1/3) * x_radius, (-1/3)*y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "loop",
+          "path_type": "loop",
+          "base_definition": "(point 2 of bar){down}\n          .. tension 0.9\n          .. (point 2.875 of bar){right}",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "(-(1/3) * x_radius, (-1/3)*y_radius)\n  -- ((1/3) * x_radius, (-1/3)*y_radius)",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "subpath (1, 3) of lower_circle",
+        "subpath (1, 3) of lower_circle shifted ((4/3)*x_radius,0)",
+        "bar",
+        "serif shifted ((4/3)*x_radius,0)",
+        "loop",
+        "serif"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        }
+      ],
+      "uses_reflection": false,
+      "reflection_axis": null,
+      "complexity": 5,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n\n  path lower_circle;\n  lower_circle := (Ox, y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){down}\n                .. tension 0.9\n                .. (Ox, -y_radius){right}\n                .. tension 0.9\n                .. (x_radius, Oy){up}\n                .. tension 0.9\n                .. cycle;\n\n  lower_circle := lower_circle scaled (2/3) shifted (2/3*x_radius, -1/3*y_radius);\n  draw subpath (1, 3) of lower_circle;\n  draw subpath (1, 3) of lower_circle shifted ((4/3)*x_radius,0);\n\n  pickup thin_pen;\n  path bar;\n  bar := (point 1 of lower_circle){up}\n        .. tension 0.9\n        .. (Ox, Oy)\n        .. tension 0.9\n        .. ((4/3)*x_radius, y_radius){right}\n        .. tension 0.9\n        .. ((8/3)*x_radius, Oy){down}\n        .. tension 0.9\n        .. ((point 1 of lower_circle) shifted ((8/3)*x_radius,0)){down};\n  draw bar;\n\n  pickup loz_pen;\n  path serif;\n  serif := (-(1/3) * x_radius, (-1/3)*y_radius)\n  -- ((1/3) * x_radius, (-1/3)*y_radius);\n  draw serif shifted ((4/3)*x_radius,0);\n\n  pickup thin_pen;\n  path loop;\n  loop := (point 2 of bar){down}\n          .. tension 0.9\n          .. (point 2.875 of bar){right};\n  draw loop;\n\n  pickup loz_pen;\n  path serif;\n  serif := (point 2.875 of bar)\n          -- (point 2.875 of bar)+((1/3)*x_radius,0);\n  draw serif;\n\n"
+    },
+    "U10419": {
+      "unicode_codepoint": "U10419",
+      "unicode_name": "DESERET CAPITAL LETTER GA",
+      "fig_number": 419,
+      "filename": "calyptapis/src/letters/U10419.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "bar": "(Ox, -y_radius) -- (Ox, (1/3)*y_radius)",
+        "serif": "(-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius)",
+        "outer_circle": "(Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-x_radius, Oy){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){up}\n                  .. tension 0.9\n                  .. cycle"
+      },
+      "paths": [
+        {
+          "name": "bar",
+          "path_type": "crossbar",
+          "base_definition": "(Ox, -y_radius) -- (Ox, (1/3)*y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "(-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "outer_circle",
+          "path_type": "closed_path",
+          "base_definition": "(Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-x_radius, Oy){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){up}\n                  .. tension 0.9\n                  .. cycle",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "bar",
+        "serif shifted (0, -2.0 * y_radius)",
+        "outer_circle scaled (2/3) shifted (-2/3*x_radius, 1/3*y_radius)"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "thin_pen"
+        }
+      ],
+      "uses_reflection": false,
+      "reflection_axis": null,
+      "complexity": 3,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n\n  path bar;\n  bar := (Ox, -y_radius) -- (Ox, (1/3)*y_radius);\n\n  draw bar;\n\n  pickup loz_pen;\n\n  path serif;\n  serif := (-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius);\n  draw serif shifted (0, -2.0 * y_radius);\n\n  pickup thin_pen;\n\n  path outer_circle;\n  outer_circle := (Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-x_radius, Oy){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){up}\n                  .. tension 0.9\n                  .. cycle;\n\n  draw outer_circle scaled (2/3) shifted (-2/3*x_radius, 1/3*y_radius);\n\n"
+    },
+    "U1041A": {
+      "unicode_codepoint": "U1041A",
+      "unicode_name": "DESERET CAPITAL LETTER JEE",
+      "fig_number": 4006,
+      "filename": "calyptapis/src/letters/U1041a.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "upper_loop": "upper_loop scaled (2/3) shifted (2/3*x_radius, 1/3*y_radius)",
+        "lower_loop": "lower_loop scaled (2/3) shifted (2/3*x_radius, -1/3*y_radius)",
+        "serif": "(0.75x_radius, (1/3)*y_radius)\n          -- (0.75x_radius, (-1/3)*y_radius)",
+        "currentpicture": "currentpicture reflectedabout((0,0), (0,1))"
+      },
+      "paths": [
+        {
+          "name": "upper_loop",
+          "path_type": "loop",
+          "base_definition": "(x_radius, (1/2)*y_radius){up}\n                .. tension 0.9\n                .. (Ox, y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){down}\n                .. tension 0.9\n                .. (Ox, -.5*y_radius){right}",
+          "transformations": [
+            {
+              "type": "scaled",
+              "value": "2/3"
+            },
+            {
+              "type": "shifted",
+              "value": "2/3*x_radius, 1/3*y_radius"
+            }
+          ],
+          "pen_used": null
+        },
+        {
+          "name": "lower_loop",
+          "path_type": "loop",
+          "base_definition": "(x_radius, (-1/2)*y_radius){down}\n                .. tension 0.9\n                .. (Ox, -y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){up}\n                .. tension 0.9\n                .. (Ox, .5*y_radius){right}",
+          "transformations": [
+            {
+              "type": "scaled",
+              "value": "2/3"
+            },
+            {
+              "type": "shifted",
+              "value": "2/3*x_radius, -1/3*y_radius"
+            }
+          ],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "(0.75x_radius, (1/3)*y_radius)\n          -- (0.75x_radius, (-1/3)*y_radius)",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "upper_loop",
+        "lower_loop",
+        "serif",
+        "(point 0 of upper_loop)\n      -- (point 0 of lower_loop)",
+        "currentpicture"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "loz_pen"
+        }
+      ],
+      "uses_reflection": true,
+      "reflection_axis": "vertical",
+      "complexity": 3,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n\n  path upper_loop;\n  upper_loop := (x_radius, (1/2)*y_radius){up}\n                .. tension 0.9\n                .. (Ox, y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){down}\n                .. tension 0.9\n                .. (Ox, -.5*y_radius){right}\n                ;\n  upper_loop := upper_loop scaled (2/3) shifted (2/3*x_radius, 1/3*y_radius);\n  draw upper_loop;\n\n  path lower_loop;\n  lower_loop := (x_radius, (-1/2)*y_radius){down}\n                .. tension 0.9\n                .. (Ox, -y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){up}\n                .. tension 0.9\n                .. (Ox, .5*y_radius){right}\n                ;\n  lower_loop := lower_loop scaled (2/3) shifted (2/3*x_radius, -1/3*y_radius);\n  draw lower_loop;\n\n  pickup loz_pen rotated 90;\n  path serif;\n  serif := (0.75x_radius, (1/3)*y_radius)\n          -- (0.75x_radius, (-1/3)*y_radius);\n  draw serif;\n\n  pickup loz_pen rotated 90;\n  draw (point 0 of upper_loop)\n      -- (point 0 of lower_loop);\n\n  currentpicture := currentpicture reflectedabout((0,0), (0,1));\n  draw currentpicture;\n\n"
+    },
+    "U1041B": {
+      "unicode_codepoint": "U1041B",
+      "unicode_name": "DESERET CAPITAL LETTER CHEE",
+      "fig_number": 4007,
+      "filename": "calyptapis/src/letters/U1041b.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "bar": "(Ox, -y_radius) -- (Ox, y_radius)",
+        "lower_serif": "(-(1/3) * x_radius, -y_radius)\n                 -- ((1/3) * x_radius, -y_radius)",
+        "beam": "((1/3) * x_radius, y_radius)\n          -- (-(4/3) * x_radius, y_radius)",
+        "serif": "(-(4/3)*x_radius+0.375*pen_height, y_radius){down}\n          .. tension 0.9\n          .. (-(4/3)*x_radius+0.375*pen_height, 0.75*y_radius-0.125*pen_height)",
+        "currentpicture": "currentpicture rotated 180"
+      },
+      "paths": [
+        {
+          "name": "bar",
+          "path_type": "crossbar",
+          "base_definition": "(Ox, -y_radius) -- (Ox, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "lower_serif",
+          "path_type": "serif",
+          "base_definition": "(-(1/3) * x_radius, -y_radius)\n                 -- ((1/3) * x_radius, -y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "beam",
+          "path_type": "straight_segment",
+          "base_definition": "((1/3) * x_radius, y_radius)\n          -- (-(4/3) * x_radius, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "(-(1/3) * x_radius, -y_radius)\n                 -- ((1/3) * x_radius, -y_radius)",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "bar",
+        "lower_serif",
+        "beam",
+        "serif",
+        "currentpicture"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "loz_pen"
+        }
+      ],
+      "uses_reflection": false,
+      "reflection_axis": null,
+      "complexity": 4,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n\n  path bar;\n  bar := (Ox, -y_radius) -- (Ox, y_radius);\n\n  draw bar;\n\n  pickup loz_pen;\n  path lower_serif;\n  lower_serif := (-(1/3) * x_radius, -y_radius)\n                 -- ((1/3) * x_radius, -y_radius);\n  draw lower_serif;\n\n  pickup loz_pen;\n  path beam;\n  beam := ((1/3) * x_radius, y_radius)\n          -- (-(4/3) * x_radius, y_radius);\n  draw beam;\n\n  pickup loz_pen rotated -90;\n  path serif;\n  serif := (-(4/3)*x_radius+0.375*pen_height, y_radius){down}\n          .. tension 0.9\n          .. (-(4/3)*x_radius+0.375*pen_height, 0.75*y_radius-0.125*pen_height);\n  draw serif;\n\n  currentpicture := currentpicture rotated 180;\n\n  draw currentpicture;\n"
+    },
+    "U1041C": {
+      "unicode_codepoint": "U1041C",
+      "unicode_name": "DESERET CAPITAL LETTER THEE",
+      "fig_number": 4008,
+      "filename": "calyptapis/src/letters/U1041c.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "barr": "(0.5x_radius, y_radius) -- (-0.5x_radius, -y_radius)",
+        "barl": "(-0.5x_radius, y_radius) -- (0.5x_radius, -y_radius)",
+        "serif": "((1/6) * x_radius, y_radius)\n          -- ((5/6) * x_radius, y_radius)",
+        "outer_circle": "(Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-x_radius, Oy){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){up}\n                  .. tension 0.9\n                  .. cycle"
+      },
+      "paths": [
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "((1/6) * x_radius, y_radius)\n          -- ((5/6) * x_radius, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "outer_circle",
+          "path_type": "closed_path",
+          "base_definition": "(Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-x_radius, Oy){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){up}\n                  .. tension 0.9\n                  .. cycle",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "subpath(0,0.5) of barr",
+        "subpath(0,0.5) of barl",
+        "serif",
+        "serif shifted (-x_radius, 0)",
+        "outer_circle scaled (1/2) shifted (0, -1/2*y_radius)"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "thin_pen"
+        }
+      ],
+      "uses_reflection": false,
+      "reflection_axis": null,
+      "complexity": 2,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n  path barl, barr;\n  barr := (0.5x_radius, y_radius) -- (-0.5x_radius, -y_radius);\n  draw subpath(0,0.5) of barr;\n  barl := (-0.5x_radius, y_radius) -- (0.5x_radius, -y_radius);\n  draw subpath(0,0.5) of barl;\n\n  pickup loz_pen;\n  path serif;\n  serif := ((1/6) * x_radius, y_radius)\n          -- ((5/6) * x_radius, y_radius);\n  draw serif;\n  draw serif shifted (-x_radius, 0);\n\n  pickup thin_pen;\n  path outer_circle;\n  outer_circle := (Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-x_radius, Oy){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){up}\n                  .. tension 0.9\n                  .. cycle;\n\n  draw outer_circle scaled (1/2) shifted (0, -1/2*y_radius);\n\n"
+    },
+    "U1041D": {
+      "unicode_codepoint": "U1041D",
+      "unicode_name": "DESERET CAPITAL LETTER ESS",
+      "fig_number": 4009,
+      "filename": "calyptapis/src/letters/U1041d.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "figure_eight": "(Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-0.75x_radius, 0.5y_radius){down}\n                  .. tension 0.9\n                  .. (Ox, Oy){right}\n                  .. tension 0.9\n                  .. (0.75x_radius, -0.5y_radius){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){left}\n                  .. tension 0.9\n                  .. (-0.75x_radius, -0.5y_radius){up}\n                  .. tension 0.9\n                  .. (Ox, Oy){right}\n                  .. tension 0.9\n                  .. (0.75x_radius, 0.5y_radius){up}\n                  .. cycle",
+        "loopr": "(Ox,Oy){right}\n           .. tension 0.9\n           .. (1.25x_radius, -(1/2)*y_radius){down}",
+        "loopl": "(Ox,Oy){left}\n           .. tension 0.9\n           .. (-1.25x_radius, (1/2)*y_radius){up}",
+        "serif": "point 1 of loopr - (0, 0.5*pen_height)\n          -- point 1 of loopr"
+      },
+      "paths": [
+        {
+          "name": "figure_eight",
+          "path_type": "closed_path",
+          "base_definition": "(Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-0.75x_radius, 0.5y_radius){down}\n                  .. tension 0.9\n                  .. (Ox, Oy){right}\n                  .. tension 0.9\n                  .. (0.75x_radius, -0.5y_radius){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){left}\n                  .. tension 0.9\n                  .. (-0.75x_radius, -0.5y_radius){up}\n                  .. tension 0.9\n                  .. (Ox, Oy){right}\n                  .. tension 0.9\n                  .. (0.75x_radius, 0.5y_radius){up}\n                  .. cycle",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "point 1 of loopl + (0,0.5*pen_height)\n          -- point 1 of loopl",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "figure_eight",
+        "loopr",
+        "loopl",
+        "serif",
+        "serif"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "loz_pen"
+        }
+      ],
+      "uses_reflection": false,
+      "reflection_axis": null,
+      "complexity": 2,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n  path figure_eight;\n  figure_eight := (Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-0.75x_radius, 0.5y_radius){down}\n                  .. tension 0.9\n                  .. (Ox, Oy){right}\n                  .. tension 0.9\n                  .. (0.75x_radius, -0.5y_radius){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){left}\n                  .. tension 0.9\n                  .. (-0.75x_radius, -0.5y_radius){up}\n                  .. tension 0.9\n                  .. (Ox, Oy){right}\n                  .. tension 0.9\n                  .. (0.75x_radius, 0.5y_radius){up}\n                  .. cycle\n                  ;\n  draw figure_eight;\n\n  path loopl, loopr;\n  loopr := (Ox,Oy){right}\n           .. tension 0.9\n           .. (1.25x_radius, -(1/2)*y_radius){down}\n           ;\n  draw loopr;\n  loopl := (Ox,Oy){left}\n           .. tension 0.9\n           .. (-1.25x_radius, (1/2)*y_radius){up}\n           ;\n  draw loopl;\n\n  pickup loz_pen rotated 90;\n  path serif;\n  serif := point 1 of loopl + (0,0.5*pen_height)\n          -- point 1 of loopl;\n  draw serif;\n  pickup loz_pen rotated 90;\n  serif := point 1 of loopr - (0, 0.5*pen_height)\n          -- point 1 of loopr;\n  draw serif;\n"
+    },
+    "U1041E": {
+      "unicode_codepoint": "U1041E",
+      "unicode_name": "DESERET CAPITAL LETTER ZEE",
+      "fig_number": 4010,
+      "filename": "calyptapis/src/letters/U1041e.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "lower_circle": "lower_circle scaled (2/3) shifted (2/3*x_radius, -1/3*y_radius)",
+        "lower_arc": "lower_arc    scaled (2/3) shifted (2/3*x_radius, -1/3*y_radius)",
+        "upper_circle": "upper_circle scaled (2/3) shifted (2/3*x_radius, 1/3*y_radius)",
+        "serif": "(xpart point 0 of upper_circle, y_radius+0.5*pen_height)\n            -- (xpart point 0 of upper_circle, (2/3)*y_radius)",
+        "currentpicture": "currentpicture reflectedabout((0,0), (0,1))"
+      },
+      "paths": [
+        {
+          "name": "lower_circle",
+          "path_type": "closed_path",
+          "base_definition": "(Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-x_radius, Oy){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){up}\n                  .. tension 0.9\n                  .. cycle",
+          "transformations": [
+            {
+              "type": "scaled",
+              "value": "2/3"
+            },
+            {
+              "type": "shifted",
+              "value": "2/3*x_radius, -1/3*y_radius"
+            }
+          ],
+          "pen_used": null
+        },
+        {
+          "name": "upper_circle",
+          "path_type": "curved_path",
+          "base_definition": "(-x_radius, (1/2)*y_radius){up}\n                  .. tension 0.9\n                  .. (Ox, y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){down}",
+          "transformations": [
+            {
+              "type": "scaled",
+              "value": "2/3"
+            },
+            {
+              "type": "shifted",
+              "value": "2/3*x_radius, 1/3*y_radius"
+            }
+          ],
+          "pen_used": null
+        },
+        {
+          "name": "lower_arc",
+          "path_type": "curved_path",
+          "base_definition": "(x_radius, Oy){down}\n              .. tension 0.9\n              .. (Ox, -y_radius){left}",
+          "transformations": [
+            {
+              "type": "scaled",
+              "value": "2/3"
+            },
+            {
+              "type": "shifted",
+              "value": "2/3*x_radius, -1/3*y_radius"
+            }
+          ],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "(xpart point 0 of upper_circle, y_radius+0.5*pen_height)\n            -- (xpart point 0 of upper_circle, (2/3)*y_radius)",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "lower_circle",
+        "upper_circle\n      .. tension 0.9\n      .. lower_arc cutafter point 0.5 of lower_arc",
+        "serif",
+        "currentpicture"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        }
+      ],
+      "uses_reflection": true,
+      "reflection_axis": "vertical",
+      "complexity": 4,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n\n  path lower_circle;\n  lower_circle := (Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-x_radius, Oy){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){up}\n                  .. tension 0.9\n                  .. cycle;\n\n  lower_circle := lower_circle scaled (2/3) shifted (2/3*x_radius, -1/3*y_radius);\n  draw lower_circle;\n\n  path upper_circle;\n  path lower_arc;\n  lower_arc := (x_radius, Oy){down}\n              .. tension 0.9\n              .. (Ox, -y_radius){left};\n  upper_circle := (-x_radius, (1/2)*y_radius){up}\n                  .. tension 0.9\n                  .. (Ox, y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){down};\n  upper_circle := upper_circle scaled (2/3) shifted (2/3*x_radius, 1/3*y_radius);\n  lower_arc    := lower_arc    scaled (2/3) shifted (2/3*x_radius, -1/3*y_radius);\n  draw upper_circle\n      .. tension 0.9\n      .. lower_arc cutafter point 0.5 of lower_arc;\n\n  pickup loz_pen rotated 90;\n  path serif;\n  serif :=(xpart point 0 of upper_circle, y_radius+0.5*pen_height)\n            -- (xpart point 0 of upper_circle, (2/3)*y_radius);\n  draw serif;\n\n  currentpicture := currentpicture reflectedabout((0,0), (0,1));\n  draw currentpicture;\n\n"
+    },
+    "U1041F": {
+      "unicode_codepoint": "U1041F",
+      "unicode_name": "DESERET CAPITAL LETTER ENG",
+      "fig_number": 4011,
+      "filename": "calyptapis/src/letters/U1041f.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "upper_loop": "upper_loop scaled (2/3) shifted (2/3*x_radius, 1/3*y_radius)",
+        "serif": "(xpart point 0 of upper_loop, y_radius)\n          -- (xpart point 0 of upper_loop + (1/3)*x_radius, y_radius)",
+        "currentpicture": "currentpicture reflectedabout((0,0),(0,y_radius))"
+      },
+      "paths": [
+        {
+          "name": "upper_loop",
+          "path_type": "loop",
+          "base_definition": "(x_radius, (1/2)*y_radius){up}\n                .. tension 0.9\n                .. (Ox, y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){down}\n                .. tension 0.9\n                .. (-x_radius, -1.0*y_radius){down}\n                .. tension 0.9\n                .. (Ox, -2y_radius){right}\n                .. tension 0.9\n                .. (x_radius, (-3/2)*y_radius){up}",
+          "transformations": [
+            {
+              "type": "scaled",
+              "value": "2/3"
+            },
+            {
+              "type": "shifted",
+              "value": "2/3*x_radius, 1/3*y_radius"
+            }
+          ],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "upper_loop",
+        "(xpart point 0 of upper_loop, y_radius+0.375*pen_height)\n      -- (xpart point 0 of upper_loop, -y_radius-0.375*pen_height)",
+        "serif",
+        "serif shifted (0, -2*y_radius)",
+        "currentpicture"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "loz_pen"
+        }
+      ],
+      "uses_reflection": true,
+      "reflection_axis": "custom(0,0 to 0,y_radius)",
+      "complexity": 1,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n\n  path upper_loop;\n  upper_loop := (x_radius, (1/2)*y_radius){up}\n                .. tension 0.9\n                .. (Ox, y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){down}\n                .. tension 0.9\n                .. (-x_radius, -1.0*y_radius){down}\n                .. tension 0.9\n                .. (Ox, -2y_radius){right}\n                .. tension 0.9\n                .. (x_radius, (-3/2)*y_radius){up}\n                ;\n  upper_loop := upper_loop scaled (2/3) shifted (2/3*x_radius, 1/3*y_radius);\n  draw upper_loop;\n\n  pickup loz_pen rotated 90;\n  draw (xpart point 0 of upper_loop, y_radius+0.375*pen_height)\n      -- (xpart point 0 of upper_loop, -y_radius-0.375*pen_height);\n\n  pickup loz_pen;\n  serif := (xpart point 0 of upper_loop, y_radius)\n          -- (xpart point 0 of upper_loop + (1/3)*x_radius, y_radius);\n  draw serif;\n  draw serif shifted (0, -2*y_radius);\n\n\n  currentpicture := currentpicture reflectedabout((0,0),(0,y_radius));\n\n  draw currentpicture;\n\n"
+    },
+    "U10420": {
+      "unicode_codepoint": "U10420",
+      "unicode_name": "DESERET CAPITAL LETTER EM",
+      "fig_number": 420,
+      "filename": "calyptapis/src/letters/U10420.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "upper_loop": "upper_loop scaled (2/3) shifted (2/3*x_radius, 1/3*y_radius)",
+        "lower_loop": "lower_loop scaled (2/3) shifted (2/3*x_radius, -1/3*y_radius)",
+        "serif": "(xpart point 0 of lower_loop, -y_radius-0.5*pen_height)\n           -- (xpart point 0 of lower_loop, -(2/3)*y_radius)"
+      },
+      "paths": [
+        {
+          "name": "upper_loop",
+          "path_type": "loop",
+          "base_definition": "(x_radius, (1/2)*y_radius){up}\n                .. tension 0.9\n                .. (Ox, y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){down}\n                .. tension 0.9\n                .. (Ox, -.5*y_radius){right}",
+          "transformations": [
+            {
+              "type": "scaled",
+              "value": "2/3"
+            },
+            {
+              "type": "shifted",
+              "value": "2/3*x_radius, 1/3*y_radius"
+            }
+          ],
+          "pen_used": null
+        },
+        {
+          "name": "lower_loop",
+          "path_type": "loop",
+          "base_definition": "(x_radius, (-1/2)*y_radius){down}\n                .. tension 0.9\n                .. (Ox, -y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){up}\n                .. tension 0.9\n                .. (Ox, .5*y_radius){right}",
+          "transformations": [
+            {
+              "type": "scaled",
+              "value": "2/3"
+            },
+            {
+              "type": "shifted",
+              "value": "2/3*x_radius, -1/3*y_radius"
+            }
+          ],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "(xpart point 0 of upper_loop, y_radius+0.5*pen_height)\n           -- (xpart point 0 of upper_loop, (2/3)*y_radius)",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "upper_loop",
+        "lower_loop reflectedabout ((0,0), (0,1)) shifted (4/3*x_radius, 0)",
+        "serif",
+        "serif reflectedabout ((0,0), (0,1)) shifted (4/3*x_radius, 0)"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        }
+      ],
+      "uses_reflection": true,
+      "reflection_axis": null,
+      "complexity": 3,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n\n  path upper_loop;\n  upper_loop := (x_radius, (1/2)*y_radius){up}\n                .. tension 0.9\n                .. (Ox, y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){down}\n                .. tension 0.9\n                .. (Ox, -.5*y_radius){right}\n                ;\n  upper_loop := upper_loop scaled (2/3) shifted (2/3*x_radius, 1/3*y_radius);\n  draw upper_loop;\n\n  path lower_loop;\n  lower_loop := (x_radius, (-1/2)*y_radius){down}\n                .. tension 0.9\n                .. (Ox, -y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){up}\n                .. tension 0.9\n                .. (Ox, .5*y_radius){right}\n                ;\n  lower_loop := lower_loop scaled (2/3) shifted (2/3*x_radius, -1/3*y_radius);\n  draw lower_loop reflectedabout ((0,0), (0,1)) shifted (4/3*x_radius, 0);\n\n  pickup loz_pen rotated 90;\n  path serif;\n  serif := (xpart point 0 of upper_loop, y_radius+0.5*pen_height)\n           -- (xpart point 0 of upper_loop, (2/3)*y_radius);\n  draw serif;\n  serif := (xpart point 0 of lower_loop, -y_radius-0.5*pen_height)\n           -- (xpart point 0 of lower_loop, -(2/3)*y_radius);\n  draw serif reflectedabout ((0,0), (0,1)) shifted (4/3*x_radius, 0);\n"
+    },
+    "U10421": {
+      "unicode_codepoint": "U10421",
+      "unicode_name": "DESERET CAPITAL LETTER ER",
+      "fig_number": 421,
+      "filename": "calyptapis/src/letters/U10421.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "bar": "(Ox, -y_radius) -- (Ox, y_radius)",
+        "serif": "(-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius)",
+        "swirl": "(point 0.75 of bar){up}\n          .. tension 0.9\n          .. (-0.5x_radius, y_radius){left}\n          .. tension 0.9\n          .. (-x_radius, 0.5y_radius){down}\n          .. tension 0.9\n          .. (Ox, Oy){right}\n          .. tension 0.9\n          .. (0.75x_radius, 0.65y_radius){up}\n          -- (0.75x_radius, y_radius)"
+      },
+      "paths": [
+        {
+          "name": "bar",
+          "path_type": "crossbar",
+          "base_definition": "(Ox, -y_radius) -- (Ox, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "(-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "swirl",
+          "path_type": "straight_segment",
+          "base_definition": "(point 0.75 of bar){up}\n          .. tension 0.9\n          .. (-0.5x_radius, y_radius){left}\n          .. tension 0.9\n          .. (-x_radius, 0.5y_radius){down}\n          .. tension 0.9\n          .. (Ox, Oy){right}\n          .. tension 0.9\n          .. (0.75x_radius, 0.65y_radius){up}\n          -- (0.75x_radius, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "bar",
+        "serif",
+        "serif shifted (0, -2.0 * y_radius)",
+        "swirl shifted (0, -0.5y_radius)",
+        "serif shifted (0.75x_radius,-0.5y_radius)"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        }
+      ],
+      "uses_reflection": false,
+      "reflection_axis": null,
+      "complexity": 3,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n  path bar;\n  bar := (Ox, -y_radius) -- (Ox, y_radius);\n  draw bar;\n\n  pickup loz_pen;\n  path serif;\n  serif := (-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius);\n  draw serif;\n  draw serif shifted (0, -2.0 * y_radius);\n\n  pickup thin_pen;\n  path swirl;\n  swirl := (point 0.75 of bar){up}\n          .. tension 0.9\n          .. (-0.5x_radius, y_radius){left}\n          .. tension 0.9\n          .. (-x_radius, 0.5y_radius){down}\n          .. tension 0.9\n          .. (Ox, Oy){right}\n          .. tension 0.9\n          .. (0.75x_radius, 0.65y_radius){up}\n          -- (0.75x_radius, y_radius);\n  draw swirl shifted (0, -0.5y_radius);\n\n  pickup loz_pen;\n  draw serif shifted (0.75x_radius,-0.5y_radius);\n\n"
+    },
+    "U10422": {
+      "unicode_codepoint": "U10422",
+      "unicode_name": "DESERET CAPITAL LETTER EL",
+      "fig_number": 422,
+      "filename": "calyptapis/src/letters/U10422.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "upper_loop": "upper_loop scaled (2/3) shifted (2/3*x_radius, 1/3*y_radius)",
+        "serif": "point 0 of upper_loop - (0, 0.5*pen_height)\n          -- point 0 of upper_loop",
+        "lower_serif": "(-(1/3) * x_radius, -y_radius)\n                -- ((1/3) * x_radius, -y_radius)",
+        "currentpicture": "currentpicture reflectedabout((0,0),(x_radius,0))"
+      },
+      "paths": [
+        {
+          "name": "upper_loop",
+          "path_type": "loop",
+          "base_definition": "(x_radius, (1/2)*y_radius){up}\n                .. tension 0.9\n                .. (Ox, y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){down}\n                .. tension 0.9\n                .. (-x_radius, -2y_radius){down}",
+          "transformations": [
+            {
+              "type": "scaled",
+              "value": "2/3"
+            },
+            {
+              "type": "shifted",
+              "value": "2/3*x_radius, 1/3*y_radius"
+            }
+          ],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "point 0 of upper_loop - (0, 0.5*pen_height)\n          -- point 0 of upper_loop",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "lower_serif",
+          "path_type": "serif",
+          "base_definition": "(-(1/3) * x_radius, -y_radius)\n                -- ((1/3) * x_radius, -y_radius)",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "upper_loop",
+        "serif",
+        "lower_serif",
+        "currentpicture"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "loz_pen"
+        }
+      ],
+      "uses_reflection": true,
+      "reflection_axis": "custom(0,0 to x_radius,0)",
+      "complexity": 3,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n\n  path upper_loop;\n  upper_loop := (x_radius, (1/2)*y_radius){up}\n                .. tension 0.9\n                .. (Ox, y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){down}\n                .. tension 0.9\n                .. (-x_radius, -2y_radius){down}\n\n                ;\n  upper_loop := upper_loop scaled (2/3) shifted (2/3*x_radius, 1/3*y_radius);\n  draw upper_loop;\n\n  pickup loz_pen rotated 90;\n  path serif;\n  serif := point 0 of upper_loop - (0, 0.5*pen_height)\n          -- point 0 of upper_loop;\n  draw serif;\n\n  pickup loz_pen;\n  path lower_serif;\n  lower_serif := (-(1/3) * x_radius, -y_radius)\n                -- ((1/3) * x_radius, -y_radius);\n  draw lower_serif;\n\n  currentpicture := currentpicture reflectedabout((0,0),(x_radius,0));\n\n  draw currentpicture;\n\n"
+    },
+    "U10423": {
+      "unicode_codepoint": "U10423",
+      "unicode_name": "DESERET CAPITAL LETTER EN",
+      "fig_number": 423,
+      "filename": "calyptapis/src/letters/U10423.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "upper_loop": "upper_loop scaled (2/3) shifted (2/3*x_radius, 1/3*y_radius)",
+        "serif": "(xpart point 5 of upper_loop, -y_radius-0.5*pen_height)\n-- (xpart point 5 of upper_loop, -(2/3)*y_radius)",
+        "currentpicture": "currentpicture reflectedabout((0,0),(0,y_radius))"
+      },
+      "paths": [
+        {
+          "name": "upper_loop",
+          "path_type": "loop",
+          "base_definition": "(x_radius, (1/2)*y_radius){up}\n                .. tension 0.9\n                .. (Ox, y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){down}\n                .. tension 0.9\n                .. (-x_radius, -1.0*y_radius){down}\n                .. tension 0.9\n                .. (Ox, -2y_radius){right}\n                .. tension 0.9\n                .. (x_radius, (-3/2)*y_radius){up}",
+          "transformations": [
+            {
+              "type": "scaled",
+              "value": "2/3"
+            },
+            {
+              "type": "shifted",
+              "value": "2/3*x_radius, 1/3*y_radius"
+            }
+          ],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "(xpart point 0 of upper_loop, y_radius+0.5*pen_height)\n-- (xpart point 0 of upper_loop, (2/3)*y_radius)",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "upper_loop",
+        "serif",
+        "serif",
+        "currentpicture"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        }
+      ],
+      "uses_reflection": true,
+      "reflection_axis": "custom(0,0 to 0,y_radius)",
+      "complexity": 2,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n\n  path upper_loop;\n  upper_loop := (x_radius, (1/2)*y_radius){up}\n                .. tension 0.9\n                .. (Ox, y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){down}\n                .. tension 0.9\n                .. (-x_radius, -1.0*y_radius){down}\n                .. tension 0.9\n                .. (Ox, -2y_radius){right}\n                .. tension 0.9\n                .. (x_radius, (-3/2)*y_radius){up}\n                ;\n  upper_loop := upper_loop scaled (2/3) shifted (2/3*x_radius, 1/3*y_radius);\n  draw upper_loop;\n\n  pickup loz_pen rotated 90;\n  path serif;\nserif := (xpart point 0 of upper_loop, y_radius+0.5*pen_height)\n-- (xpart point 0 of upper_loop, (2/3)*y_radius);\ndraw serif;\nserif := (xpart point 5 of upper_loop, -y_radius-0.5*pen_height)\n-- (xpart point 5 of upper_loop, -(2/3)*y_radius);\ndraw serif;\n\n  currentpicture := currentpicture reflectedabout((0,0),(0,y_radius));\n\n  draw currentpicture;\n\n"
+    },
+    "U10424": {
+      "unicode_codepoint": "U10424",
+      "unicode_name": "DESERET CAPITAL LETTER VEE",
+      "fig_number": 424,
+      "filename": "calyptapis/src/letters/U10424.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "serif": "(-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius)",
+        "beam": "beam rotated 15",
+        "bar": "((1/3) * x_radius * cosd(15), (1/3)*y_radius * sind(15)) -- ((1/3) * x_radius, -y_radius)"
+      },
+      "paths": [
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "(-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "beam",
+          "path_type": "straight_segment",
+          "base_definition": "((1/3) * x_radius, Oy)\n          -- (-(1/3) * x_radius, Oy)",
+          "transformations": [
+            {
+              "type": "rotated",
+              "value": "15"
+            }
+          ],
+          "pen_used": null
+        },
+        {
+          "name": "bar",
+          "path_type": "crossbar",
+          "base_definition": "(-(1/3) * x_radius, y_radius) -- (-(1/3) * x_radius * cosd(15), (-1/3)*y_radius * sind(15))",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "serif shifted (-(1/3)*x_radius,0)",
+        "serif shifted ((1/3)*x_radius, -2.0 * y_radius)",
+        "beam",
+        "bar",
+        "bar"
+      ],
+      "pen_changes": [
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "thin_pen"
+        }
+      ],
+      "uses_reflection": false,
+      "reflection_axis": null,
+      "complexity": 3,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup loz_pen;\n  path serif;\n  serif := (-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius);\n  draw serif shifted (-(1/3)*x_radius,0);\n  draw serif shifted ((1/3)*x_radius, -2.0 * y_radius);\n\n  pickup loz_pen rotated 15;\n  path beam;\n  beam := ((1/3) * x_radius, Oy)\n          -- (-(1/3) * x_radius, Oy);\n  beam := beam rotated 15;\n  draw beam;\n\n  pickup thin_pen;\n  path bar;\n  bar := (-(1/3) * x_radius, y_radius) -- (-(1/3) * x_radius * cosd(15), (-1/3)*y_radius * sind(15));\n  draw bar;\n  bar := ((1/3) * x_radius * cosd(15), (1/3)*y_radius * sind(15)) -- ((1/3) * x_radius, -y_radius);\n  draw bar;\n\n"
+    },
+    "U10425": {
+      "unicode_codepoint": "U10425",
+      "unicode_name": "DESERET CAPITAL LETTER EF",
+      "fig_number": 425,
+      "filename": "calyptapis/src/letters/U10425.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "bar": "(Ox, -y_radius) -- (Ox, y_radius)",
+        "serif": "(-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius)",
+        "short": "(1.5x_radius, y_radius)\n           -- ((1/3) * x_radius+1.5x_radius, y_radius)",
+        "beam": "point 0 of bar\n          -- point 1 of bar shifted (1.5x_radius, 0)"
+      },
+      "paths": [
+        {
+          "name": "bar",
+          "path_type": "crossbar",
+          "base_definition": "(Ox, -y_radius) -- (Ox, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "(-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "short",
+          "path_type": "straight_segment",
+          "base_definition": "(1.5x_radius, y_radius)\n           -- ((1/3) * x_radius+1.5x_radius, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "beam",
+          "path_type": "straight_segment",
+          "base_definition": "point 0 of bar\n          -- point 1 of bar shifted (1.5x_radius, 0)",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "bar",
+        "bar shifted (1.5x_radius, 0)",
+        "serif",
+        "serif shifted (1.5x_radius, -2.0 * y_radius)",
+        "short",
+        "beam"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "thin_pen"
+        }
+      ],
+      "uses_reflection": false,
+      "reflection_axis": null,
+      "complexity": 4,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n\n  path bar;\n  bar := (Ox, -y_radius) -- (Ox, y_radius);\n\n  draw bar;\n  draw bar shifted (1.5x_radius, 0);\n\n  pickup loz_pen;\n\n  path serif;\n  serif := (-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius);\n  draw serif;\n  draw serif shifted (1.5x_radius, -2.0 * y_radius);\n\n  path short;\n  short := (1.5x_radius, y_radius)\n           -- ((1/3) * x_radius+1.5x_radius, y_radius);\n  draw short;\n\n  pickup thin_pen;\n  path beam;\n  beam := point 0 of bar\n          -- point 1 of bar shifted (1.5x_radius, 0);\n  draw beam;\n\n"
+    },
+    "U10426": {
+      "unicode_codepoint": "U10426",
+      "unicode_name": "DESERET CAPITAL LETTER OI",
+      "fig_number": 426,
+      "filename": "calyptapis/src/letters/U10426.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "bar": "(Ox, -y_radius - 0.325*pen_height) -- (Ox, y_radius)",
+        "serif": "(-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius)",
+        "sweep_base": "(-0.375*x_radius,-1.0*y_radius)\n           .. tension 1.3\n           .. (Ox,-1.0*y_radius-0.25*pen_height)\n           .. tension 1.3\n           .. (0.75*x_radius,-1.0*y_radius)",
+        "bara": "sweep_base rotatedaround ((Ox,-y_radius),-15)\n          shifted (Ox-0.75*cosd(-15)*x_radius,Oy-0.75*sind(-15)*y_radius)",
+        "barb": "sweep_base rotatedaround ((Ox,-y_radius),-15)\n          shifted (Ox-1.75*cosd(-15)*x_radius,Oy-0.75*sind(-15)*y_radius)",
+        "vert": "point 0 of bara -- point 2 of barb",
+        "beam": "(-0.5 * x_radius, Oy)\n          -- (0.5 * x_radius, Oy)"
+      },
+      "paths": [
+        {
+          "name": "bar",
+          "path_type": "crossbar",
+          "base_definition": "(Ox, -y_radius - 0.325*pen_height) -- (Ox, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "(-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "vert",
+          "path_type": "straight_segment",
+          "base_definition": "point 0 of bara -- point 2 of barb",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "beam",
+          "path_type": "straight_segment",
+          "base_definition": "(-0.5 * x_radius, Oy)\n          -- (0.5 * x_radius, Oy)",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "bar",
+        "serif",
+        "beam rotated -15"
+      ],
+      "pen_changes": [
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "loz_pen"
+        }
+      ],
+      "uses_reflection": false,
+      "reflection_axis": null,
+      "complexity": 4,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup loz_pen rotated 90;\n  path bar;\n  bar := (Ox, -y_radius - 0.325*pen_height) -- (Ox, y_radius);\n  draw bar;\n\n  pickup loz_pen;\n  path serif;\n  serif := (-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius);\n  draw serif;\n\n  % Define sweep paths\n  path sweep_base, bara, barb;\n  sweep_base := (-0.375*x_radius,-1.0*y_radius)\n           .. tension 1.3\n           .. (Ox,-1.0*y_radius-0.25*pen_height)\n           .. tension 1.3\n           .. (0.75*x_radius,-1.0*y_radius);\n\n  bara := sweep_base rotatedaround ((Ox,-y_radius),-15)\n          shifted (Ox-0.75*cosd(-15)*x_radius,Oy-0.75*sind(-15)*y_radius);\n\n  barb := sweep_base rotatedaround ((Ox,-y_radius),-15)\n          shifted (Ox-1.75*cosd(-15)*x_radius,Oy-0.75*sind(-15)*y_radius);\n\n  % Draw sweeps with rotating pen\n  rotatingdraw(bara, -15, 0, 20, 0.6);\n  rotatingdraw(barb, -15, 0, 20, 0.6);\n\n  path vert;\n  vert := point 0 of bara -- point 2 of barb;\n  rotatingdraw(vert, -15, 0, 10, 0.6);\n\n  pickup loz_pen rotated -15;\n  path beam;\n  beam := (-0.5 * x_radius, Oy)\n          -- (0.5 * x_radius, Oy);\n  draw beam rotated -15;\n\n"
+    },
+    "U10427": {
+      "unicode_codepoint": "U10427",
+      "unicode_name": "DESERET CAPITAL LETTER OI",
+      "fig_number": 427,
+      "filename": "calyptapis/src/letters/U10427.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "outer_circle": "(Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-x_radius, Oy){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){up}\n                  .. tension 0.9\n                  .. cycle",
+        "bar": "(Ox, -y_radius) -- (Ox, y_radius)",
+        "beam": "(-0.5 * x_radius, Oy)\n          -- (0.5 * x_radius, Oy)"
+      },
+      "paths": [
+        {
+          "name": "outer_circle",
+          "path_type": "closed_path",
+          "base_definition": "(Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-x_radius, Oy){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){up}\n                  .. tension 0.9\n                  .. cycle",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "bar",
+          "path_type": "crossbar",
+          "base_definition": "(Ox, -y_radius) -- (Ox, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "beam",
+          "path_type": "straight_segment",
+          "base_definition": "(-0.5 * x_radius, Oy)\n          -- (0.5 * x_radius, Oy)",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "outer_circle",
+        "bar",
+        "beam rotated -15"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        }
+      ],
+      "uses_reflection": false,
+      "reflection_axis": null,
+      "complexity": 3,
+      "raw_code": "\nnumeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n\n  path outer_circle;\n  outer_circle := (Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-x_radius, Oy){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){up}\n                  .. tension 0.9\n                  .. cycle;\n\n  draw outer_circle;\n\n  pickup thin_pen;\n\n  path bar;\n  bar := (Ox, -y_radius) -- (Ox, y_radius);\n\n  draw bar;\n\n  pickup loz_pen rotated -15;\n  path beam;\n  beam := (-0.5 * x_radius, Oy)\n          -- (0.5 * x_radius, Oy);\n  draw beam rotated -15;\n\n"
+    },
+    "UE000": {
+      "unicode_codepoint": "UE000",
+      "unicode_name": "PRIVATE USE MULE",
+      "fig_number": 4012,
+      "filename": "calyptapis/src/letters/Ue000.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "bar": "(Ox, -y_radius) -- (Ox, (1/3)*y_radius)",
+        "serif": "(-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius)",
+        "outer_circle": "(Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-x_radius, Oy){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){up}\n                  .. tension 0.9\n                  .. cycle",
+        "beam": "(-(1/3) * x_radius, -(2/3) * y_radius)\n          -- ((1/3) * x_radius, -(2/3) * y_radius)"
+      },
+      "paths": [
+        {
+          "name": "bar",
+          "path_type": "crossbar",
+          "base_definition": "(Ox, -y_radius) -- (Ox, (1/3)*y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "(-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "outer_circle",
+          "path_type": "closed_path",
+          "base_definition": "(Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-x_radius, Oy){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){up}\n                  .. tension 0.9\n                  .. cycle",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "beam",
+          "path_type": "straight_segment",
+          "base_definition": "(-(1/3) * x_radius, -(2/3) * y_radius)\n          -- ((1/3) * x_radius, -(2/3) * y_radius)",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "bar",
+        "serif shifted (0, -2.0 * y_radius)",
+        "outer_circle scaled (2/3) shifted (-2/3*x_radius, 1/3*y_radius)",
+        "beam"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        }
+      ],
+      "uses_reflection": false,
+      "reflection_axis": null,
+      "complexity": 4,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n\n  path bar;\n  bar := (Ox, -y_radius) -- (Ox, (1/3)*y_radius);\n\n  draw bar;\n\n  pickup loz_pen;\n\n  path serif;\n  serif := (-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius);\n  draw serif shifted (0, -2.0 * y_radius);\n\n  pickup thin_pen;\n\n  path outer_circle;\n  outer_circle := (Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-x_radius, Oy){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){up}\n                  .. tension 0.9\n                  .. cycle;\n\n  draw outer_circle scaled (2/3) shifted (-2/3*x_radius, 1/3*y_radius);\n\n  pickup loz_pen;\n  path beam;\n  beam := (-(1/3) * x_radius, -(2/3) * y_radius)\n          -- ((1/3) * x_radius, -(2/3) * y_radius);\n  draw beam;\n\n"
+    },
+    "UE001": {
+      "unicode_codepoint": "UE001",
+      "unicode_name": "PRIVATE USE BARRED LONG A",
+      "fig_number": 4013,
+      "filename": "calyptapis/src/letters/Ue001.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "outer_circle": "(Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-x_radius, Oy){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){up}\n                  .. tension 0.9\n                  .. cycle",
+        "serif": "point 6.5 of loop - (0, 0.5*y_radius)\n          -- point 6.5 of loop + (0, 0.25*y_radius)"
+      },
+      "paths": [
+        {
+          "name": "outer_circle",
+          "path_type": "closed_path",
+          "base_definition": "(Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-x_radius, Oy){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){up}\n                  .. tension 0.9\n                  .. cycle",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "subpath(0.45, 0.55) of outer_circle",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "(outer_circle cutbefore point 0.55 of outer_circle cutafter point 4 of outer_circle)\n  .. (loop cutbefore point 3 of loop cutafter point 5 of loop)\n  .. point 3 of outer_circle\n  ",
+        "serif",
+        "serif"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "loz_pen"
+        }
+      ],
+      "uses_reflection": false,
+      "reflection_axis": null,
+      "complexity": 2,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n\n  path outer_circle;\n  outer_circle := (Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-x_radius, Oy){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){up}\n                  .. tension 0.9\n                  .. cycle;\n\n  path loop;\n  loop = fullcircle xscaled x_radius yscaled y_radius shifted (0.1*x_radius, 0.5 * y_radius);\n  draw (outer_circle cutbefore point 0.55 of outer_circle cutafter point 4 of outer_circle)\n  .. (loop cutbefore point 3 of loop cutafter point 5 of loop)\n  .. point 3 of outer_circle\n  ;\n\n  pickup loz_pen rotated 45;\n  path serif;\n  serif := subpath(0.45, 0.55) of outer_circle;\n  draw serif;\n\n  pickup loz_pen rotated 90;\n  serif := point 6.5 of loop - (0, 0.5*y_radius)\n          -- point 6.5 of loop + (0, 0.25*y_radius);\n  draw serif;\n\n"
+    },
+    "UE002": {
+      "unicode_codepoint": "UE002",
+      "unicode_name": "PRIVATE USE HASHED SHORT O",
+      "fig_number": 4014,
+      "filename": "calyptapis/src/letters/Ue002.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "bar": "(-0.75*x_radius,-1.0*y_radius)\n          .. tension 0.9\n          .. (Ox,-1.0*y_radius-0.25*pen_height)\n          .. tension 0.9\n          .. (0.75*x_radius,-1.0*y_radius)",
+        "serif": "(-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius)",
+        "arc": "halfcircle scaled (1.5*x_radius) shifted (-0.75*x_radius, -y_radius)"
+      },
+      "paths": [
+        {
+          "name": "bar",
+          "path_type": "crossbar",
+          "base_definition": "(Ox, -y_radius) -- (Ox, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "(-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "arc",
+          "path_type": "unknown",
+          "base_definition": "halfcircle scaled (1.5*x_radius) shifted (-0.75*x_radius, -y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "bar",
+          "path_type": "crossbar",
+          "base_definition": "(Ox, -y_radius) -- (Ox, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "bar",
+        "serif",
+        "serif shifted (0, -2.0 * y_radius)",
+        "serif shifted (-1.5*x_radius, -2.0 * y_radius)",
+        "arc",
+        "bar rotatedaround ((Ox,-y_radius),-15)\n           shifted (Ox-0.75*cosd(-15)*x_radius,Oy-0.75*sind(-15)*y_radius)\n           shifted (0, y_radius)"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        }
+      ],
+      "uses_reflection": false,
+      "reflection_axis": null,
+      "complexity": 4,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n\n  path bar;\n  bar := (Ox, -y_radius) -- (Ox, y_radius);\n\n  draw bar;\n\n  pickup loz_pen;\n\n  path serif;\n  serif := (-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius);\n  draw serif;\n  draw serif shifted (0, -2.0 * y_radius);\n  draw serif shifted (-1.5*x_radius, -2.0 * y_radius);\n\n  pickup thin_pen;\n  path arc;\n  arc := halfcircle scaled (1.5*x_radius) shifted (-0.75*x_radius, -y_radius);\n\n  draw arc;\n\n  pickup loz_pen rotated -15;\n  path bar;\n  bar := (-0.75*x_radius,-1.0*y_radius)\n          .. tension 0.9\n          .. (Ox,-1.0*y_radius-0.25*pen_height)\n          .. tension 0.9\n          .. (0.75*x_radius,-1.0*y_radius);\n  draw bar rotatedaround ((Ox,-y_radius),-15)\n           shifted (Ox-0.75*cosd(-15)*x_radius,Oy-0.75*sind(-15)*y_radius)\n           shifted (0, y_radius);\n\n"
+    },
+    "UE003": {
+      "unicode_codepoint": "UE003",
+      "unicode_name": "UNKNOWN",
+      "fig_number": 4015,
+      "filename": "calyptapis/src/letters/Ue003.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "upper_loop": "upper_loop scaled (2/3) shifted (2/3*x_radius, 1/3*y_radius)",
+        "lower_loop": "lower_loop scaled (2/3) shifted (2/3*x_radius, -1/3*y_radius)",
+        "serif": "(0.75x_radius, (1/3)*y_radius)\n          -- (0.75x_radius, (-1/3)*y_radius)",
+        "currentpicture": "currentpicture reflectedabout((0,0), (0,1))"
+      },
+      "paths": [
+        {
+          "name": "upper_loop",
+          "path_type": "loop",
+          "base_definition": "(x_radius, (1/2)*y_radius){up}\n                .. tension 0.9\n                .. (Ox, y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){down}\n                .. tension 0.9\n                .. (Ox, -.5*y_radius){right}",
+          "transformations": [
+            {
+              "type": "scaled",
+              "value": "2/3"
+            },
+            {
+              "type": "shifted",
+              "value": "2/3*x_radius, 1/3*y_radius"
+            }
+          ],
+          "pen_used": null
+        },
+        {
+          "name": "lower_loop",
+          "path_type": "loop",
+          "base_definition": "(x_radius, (-1/2)*y_radius){down}\n                .. tension 0.9\n                .. (Ox, -y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){up}\n                .. tension 0.9\n                .. (Ox, .5*y_radius){right}",
+          "transformations": [
+            {
+              "type": "scaled",
+              "value": "2/3"
+            },
+            {
+              "type": "shifted",
+              "value": "2/3*x_radius, -1/3*y_radius"
+            }
+          ],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "(0.75x_radius, (1/3)*y_radius)\n          -- (0.75x_radius, (-1/3)*y_radius)",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "upper_loop",
+        "lower_loop",
+        "serif",
+        "currentpicture"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        }
+      ],
+      "uses_reflection": true,
+      "reflection_axis": "vertical",
+      "complexity": 3,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n\n  path upper_loop;\n  upper_loop := (x_radius, (1/2)*y_radius){up}\n                .. tension 0.9\n                .. (Ox, y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){down}\n                .. tension 0.9\n                .. (Ox, -.5*y_radius){right}\n                ;\n  upper_loop := upper_loop scaled (2/3) shifted (2/3*x_radius, 1/3*y_radius);\n  draw upper_loop;\n\n  path lower_loop;\n  lower_loop := (x_radius, (-1/2)*y_radius){down}\n                .. tension 0.9\n                .. (Ox, -y_radius){left}\n                .. tension 0.9\n                .. (-x_radius, Oy){up}\n                .. tension 0.9\n                .. (Ox, .5*y_radius){right}\n                ;\n  lower_loop := lower_loop scaled (2/3) shifted (2/3*x_radius, -1/3*y_radius);\n  draw lower_loop;\n\n  pickup loz_pen rotated 90;\n  path serif;\n  serif := (0.75x_radius, (1/3)*y_radius)\n          -- (0.75x_radius, (-1/3)*y_radius);\n  draw serif;\n\n  currentpicture := currentpicture reflectedabout((0,0), (0,1));\n  draw currentpicture;\n"
+    },
+    "UE004": {
+      "unicode_codepoint": "UE004",
+      "unicode_name": "PRIVATE USE LOOPED SHORT AH",
+      "fig_number": 4016,
+      "filename": "calyptapis/src/letters/Ue004.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "bar": "(Ox, -y_radius - 0.325*pen_height) -- (Ox, y_radius)",
+        "sweep_base": "(-0.375*x_radius,-1.0*y_radius)\n           .. tension 1.3\n           .. (Ox,-1.0*y_radius-0.25*pen_height)\n           .. tension 1.3\n           .. (0.75*x_radius,-1.0*y_radius)",
+        "bara": "sweep_base rotatedaround ((Ox,-y_radius),-15)\n          shifted (Ox-0.75*cosd(-15)*x_radius,Oy-0.75*sind(-15)*y_radius)",
+        "barb": "sweep_base rotatedaround ((Ox,-y_radius),-15)\n          shifted (Ox-1.75*cosd(-15)*x_radius,Oy-0.75*sind(-15)*y_radius)",
+        "vert": "point 0 of bara -- point 2 of barb",
+        "outer_circle": "(Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-x_radius, Oy){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){up}\n                  .. tension 0.9\n                  .. cycle"
+      },
+      "paths": [
+        {
+          "name": "bar",
+          "path_type": "crossbar",
+          "base_definition": "(Ox, -y_radius - 0.325*pen_height) -- (Ox, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "vert",
+          "path_type": "straight_segment",
+          "base_definition": "point 0 of bara -- point 2 of barb",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "outer_circle",
+          "path_type": "closed_path",
+          "base_definition": "(Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-x_radius, Oy){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){up}\n                  .. tension 0.9\n                  .. cycle",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "subpath(0,0.75) of bar",
+        "outer_circle scaled (2/3) shifted (-2/3*x_radius, 1/3*y_radius)"
+      ],
+      "pen_changes": [
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "thin_pen"
+        }
+      ],
+      "uses_reflection": false,
+      "reflection_axis": null,
+      "complexity": 3,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup loz_pen rotated 90;\n  path bar;\n  bar := (Ox, -y_radius - 0.325*pen_height) -- (Ox, y_radius);\n  draw subpath(0,0.75) of bar;\n\n  % Define sweep paths\n  path sweep_base, bara, barb;\n  sweep_base := (-0.375*x_radius,-1.0*y_radius)\n           .. tension 1.3\n           .. (Ox,-1.0*y_radius-0.25*pen_height)\n           .. tension 1.3\n           .. (0.75*x_radius,-1.0*y_radius);\n\n  bara := sweep_base rotatedaround ((Ox,-y_radius),-15)\n          shifted (Ox-0.75*cosd(-15)*x_radius,Oy-0.75*sind(-15)*y_radius);\n\n  barb := sweep_base rotatedaround ((Ox,-y_radius),-15)\n          shifted (Ox-1.75*cosd(-15)*x_radius,Oy-0.75*sind(-15)*y_radius);\n\n  % Draw sweeps with rotating pen\n  rotatingdraw(bara, -15, 0, 20, 0.6);\n  rotatingdraw(barb, -15, 0, 20, 0.6);\n\n  path vert;\n  vert := point 0 of bara -- point 2 of barb;\n  rotatingdraw(vert, -15, 0, 10, 0.6);\n\n  pickup thin_pen;\n  path outer_circle;\n  outer_circle := (Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-x_radius, Oy){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){up}\n                  .. tension 0.9\n                  .. cycle;\n\n  draw outer_circle scaled (2/3) shifted (-2/3*x_radius, 1/3*y_radius);\n\n"
+    },
+    "UE005": {
+      "unicode_codepoint": "UE005",
+      "unicode_name": "PRIVATE USE LOOPED SHORT A",
+      "fig_number": 4017,
+      "filename": "calyptapis/src/letters/Ue005.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "bar": "(Ox, -y_radius - 0.325*pen_height) -- (Ox, y_radius)",
+        "sweep_base": "(-0.75*x_radius,-1.0*y_radius)\n          .. tension 0.9\n          .. (Ox,-1.0*y_radius-0.25*pen_height)\n          .. tension 0.9\n          .. (0.75*x_radius,-1.0*y_radius)",
+        "sweep": "sweep_base rotatedaround ((Ox,-y_radius),-15)\n           shifted (Ox-0.75*cosd(-15)*x_radius,Oy-0.75*sind(-15)*y_radius)",
+        "outer_circle": "(Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-x_radius, Oy){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){up}\n                  .. tension 0.9\n                  .. cycle"
+      },
+      "paths": [
+        {
+          "name": "bar",
+          "path_type": "crossbar",
+          "base_definition": "(Ox, -y_radius - 0.325*pen_height) -- (Ox, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "outer_circle",
+          "path_type": "closed_path",
+          "base_definition": "(Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-x_radius, Oy){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){up}\n                  .. tension 0.9\n                  .. cycle",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "subpath(0, 0.75) of bar",
+        "outer_circle scaled (2/3) shifted (-2/3*x_radius, 1/3*y_radius)"
+      ],
+      "pen_changes": [
+        {
+          "pen": "loz_pen"
+        },
+        {
+          "pen": "thin_pen"
+        }
+      ],
+      "uses_reflection": false,
+      "reflection_axis": null,
+      "complexity": 2,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup loz_pen rotated 90;\n  path bar;\n  bar := (Ox, -y_radius - 0.325*pen_height) -- (Ox, y_radius);\n  draw subpath(0, 0.75) of bar;\n\n  % Define the sweep path (with rotation/shift)\n  path sweep_base, sweep;\n  sweep_base := (-0.75*x_radius,-1.0*y_radius)\n          .. tension 0.9\n          .. (Ox,-1.0*y_radius-0.25*pen_height)\n          .. tension 0.9\n          .. (0.75*x_radius,-1.0*y_radius);\n\n  sweep := sweep_base rotatedaround ((Ox,-y_radius),-15)\n           shifted (Ox-0.75*cosd(-15)*x_radius,Oy-0.75*sind(-15)*y_radius);\n\n  % Draw with rotating pen\n  rotatingdraw(sweep, -15, 0, 20, 0.6);\n\n  pickup thin_pen;\n  path outer_circle;\n  outer_circle := (Ox, y_radius){left}\n                  .. tension 0.9\n                  .. (-x_radius, Oy){down}\n                  .. tension 0.9\n                  .. (Ox, -y_radius){right}\n                  .. tension 0.9\n                  .. (x_radius, Oy){up}\n                  .. tension 0.9\n                  .. cycle;\n\n  draw outer_circle scaled (2/3) shifted (-2/3*x_radius, 1/3*y_radius);\n\n"
+    },
+    "UE00C": {
+      "unicode_codepoint": "UE00C",
+      "unicode_name": "PRIVATE USE DOTLESS I",
+      "fig_number": 4018,
+      "filename": "calyptapis/src/letters/Ue00c.mp",
+      "local_variables": {
+        "x_diam": "2 * x_radius",
+        "y_diam": "2 * y_radius",
+        "bar": "(Ox, -y_radius) -- (Ox, y_radius)",
+        "serif": "(-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius)"
+      },
+      "paths": [
+        {
+          "name": "bar",
+          "path_type": "crossbar",
+          "base_definition": "(Ox, -y_radius) -- (Ox, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        },
+        {
+          "name": "serif",
+          "path_type": "serif",
+          "base_definition": "(-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius)",
+          "transformations": [],
+          "pen_used": null
+        }
+      ],
+      "draw_operations": [
+        "bar",
+        "serif",
+        "serif shifted (0, -2.0 * y_radius)"
+      ],
+      "pen_changes": [
+        {
+          "pen": "thin_pen"
+        },
+        {
+          "pen": "loz_pen"
+        }
+      ],
+      "uses_reflection": false,
+      "reflection_axis": null,
+      "complexity": 2,
+      "raw_code": "\n  numeric x_diam, y_diam;\n  x_diam := 2 * x_radius;\n  y_diam := 2 * y_radius;\n\n  pickup thin_pen;\n\n  path bar;\n  bar := (Ox, -y_radius) -- (Ox, y_radius);\n\n  draw bar;\n\n  pickup loz_pen;\n\n  path serif;\n  serif := (-(1/3) * x_radius, y_radius)\n          -- ((1/3) * x_radius, y_radius);\n  draw serif;\n  draw serif shifted (0, -2.0 * y_radius);\n\n"
+    }
+  }
+}

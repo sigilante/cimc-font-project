@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!-- Created by MetaPost 2.11 on 2026.02.09:1107 -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="73.702744" height="86.794800" viewBox="0 0 73.702744 86.794800">
+<!-- Original BoundingBox: -12.642380 -43.397400 61.060364 43.397400 -->
+  <path d="M12.642380 79.262817L12.642380 7.531982" style="stroke:rgb(0,0,0); stroke-width: 15.063950;stroke-linecap: round;stroke-linejoin: round;stroke-miterlimit: 10.000000;fill: none;"></path>
+  <path d="M61.060364 79.262817L61.060364 7.531982" style="stroke:rgb(0,0,0); stroke-width: 15.063950;stroke-linecap: round;stroke-linejoin: round;stroke-miterlimit: 10.000000;fill: none;"></path>
+  <path d="M1.882996 -0.000000L0.551544 2.206177L0.000000 7.531982L0.551544 12.857788L1.882996 15.063965L23.401764 15.063965L24.733215 12.857788L25.284760 7.531982L24.733215 2.206177L23.401764 -0.000000Z" style="fill: rgb(0,0,0);stroke: none;"></path>
+  <path d="M50.300980 71.730835L48.969528 73.937012L48.417984 79.262817L48.969528 84.588623L50.300980 86.794800L71.819748 86.794800L73.151199 84.588623L73.702744 79.262817L73.151199 73.937012L71.819748 71.730835Z" style="fill: rgb(0,0,0);stroke: none;"></path>
+  <path d="M61.060364 -0.000000L59.728912 2.206177L59.177368 7.531982L59.728912 12.857788L61.060364 15.063965L71.819748 15.063965L73.151199 12.857788L73.702744 7.531982L73.151199 2.206177L71.819748 -0.000000Z" style="fill: rgb(0,0,0);stroke: none;"></path>
+  <path d="M12.642380 79.262817L61.060364 7.531982" style="stroke:rgb(0,0,0); stroke-width: 15.063950;stroke-linecap: round;stroke-linejoin: round;stroke-miterlimit: 10.000000;fill: none;"></path>
+</svg>

@@ -1,0 +1,2096 @@
+{
+  "reviews": {
+    "Normal/calyptapis-400.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-400.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-4000.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-4000.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-4001.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-4001.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-4002.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-4002.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-4003.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-4003.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-4004.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-4004.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-4005.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-4005.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-4006.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-4006.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-4007.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-4007.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-4008.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-4008.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-4008.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-4008.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-4008.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-4008.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-4008.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-4008.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-4008.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-4008.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-4008.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-4008.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-4009.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-4009.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-401.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-401.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-4010.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-4010.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-4011.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-4011.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-4012.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-4012.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-4013.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-4013.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-4014.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-4014.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-4015.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-4015.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-4016.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-4016.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-4017.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-4017.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-4018.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-4018.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-402.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-402.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-403.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-403.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-404.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-404.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-405.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-405.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-406.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-406.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-407.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-407.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-408.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-408.svg",
+      "sentiment": "up",
+      "comment": "Weights higher than UltraLight have a chunk out of the lower right where the bottom sweep meets the vertical stroke.  That's a little touchy to fix."
+    },
+    "Normal/calyptapis-409.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-409.svg",
+      "sentiment": "up",
+      "comment": "There is a chunk out of the lower right where the bottom sweep meets the vertical stroke.  That's a little touchy to fix."
+    },
+    "Normal/calyptapis-410.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-410.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-411.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-411.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-412.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-412.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-413.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-413.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-414.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-414.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-414.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-414.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-414.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-414.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-414.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-414.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-414.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-414.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-414.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-414.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-415.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-415.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-415.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-415.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-416.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-416.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-417.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-417.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-418.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-418.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-419.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-419.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-420.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-420.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-421.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-421.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-422.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-422.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-423.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-423.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-424.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-424.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-425.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-425.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-426.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-426.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-427.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-427.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-400.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-400.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-400.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-400.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-4000.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-4000.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-4001.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-4001.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-4002.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-4002.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-4003.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-4003.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-4004.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-4004.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-4005.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-4005.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-4006.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-4006.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-4007.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-4007.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-4009.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-4009.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-401.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-401.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-4010.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-4010.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-4011.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-4011.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-4012.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-4012.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-4013.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-4013.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-4014.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-4014.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-4015.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-4015.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-4016.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-4016.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-4017.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-4017.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-4018.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-4018.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-402.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-402.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-403.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-403.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-404.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-404.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-405.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-405.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-406.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-406.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-407.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-407.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-408.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-408.svg",
+      "sentiment": "up",
+      "comment": "Weights higher than UltraLight have a chunk out of the lower right where the bottom sweep meets the vertical stroke.  That's a little touchy to fix.  Even UltraLight isn't perfect at that junction."
+    },
+    "UltraLight/calyptapis-409.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-409.svg",
+      "sentiment": "up",
+      "comment": "There is a chunk out of the lower right where the bottom sweep meets the vertical stroke.  That's a little touchy to fix."
+    },
+    "UltraLight/calyptapis-410.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-410.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-411.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-411.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-412.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-412.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-413.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-413.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-415.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-415.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-416.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-416.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-417.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-417.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-418.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-418.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-419.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-419.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-420.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-420.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-421.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-421.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-422.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-422.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-423.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-423.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-424.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-424.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-425.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-425.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-426.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-426.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-427.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-427.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-400.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-400.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-4000.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-4000.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-4001.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-4001.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-4002.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-4002.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-4003.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-4003.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-4004.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-4004.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-4005.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-4005.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-4006.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-4006.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-4007.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-4007.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-4009.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-4009.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-401.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-401.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-4010.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-4010.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-4011.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-4011.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-4012.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-4012.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-4013.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-4013.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-4015.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-4015.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-4016.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-4016.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-4017.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-4017.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-4018.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-4018.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-402.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-402.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-403.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-403.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-404.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-404.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-405.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-405.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-406.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-406.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-408.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-408.svg",
+      "sentiment": "up",
+      "comment": "Weights higher than UltraLight have a chunk out of the lower right where the bottom sweep meets the vertical stroke.  That's a little touchy to fix."
+    },
+    "Light/calyptapis-409.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-409.svg",
+      "sentiment": "up",
+      "comment": "There is a chunk out of the lower right where the bottom sweep meets the vertical stroke.  That's a little touchy to fix."
+    },
+    "Light/calyptapis-410.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-410.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-411.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-411.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-412.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-412.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-413.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-413.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-415.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-415.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-416.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-416.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-417.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-417.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-418.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-418.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-419.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-419.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-420.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-420.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-421.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-421.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-422.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-422.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-423.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-423.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-424.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-424.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-425.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-425.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-426.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-426.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-427.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-427.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-407.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-407.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-4014.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-4014.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-4000.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-4000.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-4001.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-4001.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-4002.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-4002.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-4003.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-4003.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-4004.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-4004.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-4005.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-4005.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-4006.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-4006.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-4007.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-4007.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-4009.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-4009.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-401.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-401.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-4010.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-4010.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-4011.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-4011.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-4012.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-4012.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-4013.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-4013.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-4014.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-4014.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-4015.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-4015.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-4016.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-4016.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-4017.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-4017.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-4018.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-4018.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-402.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-402.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-403.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-403.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-404.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-404.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-405.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-405.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-406.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-406.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-407.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-407.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-408.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-408.svg",
+      "sentiment": "up",
+      "comment": "Weights higher than UltraLight have a chunk out of the lower right where the bottom sweep meets the vertical stroke.  That's a little touchy to fix."
+    },
+    "SemiBold/calyptapis-409.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-409.svg",
+      "sentiment": "up",
+      "comment": "There is a chunk out of the lower right where the bottom sweep meets the vertical stroke.  That's a little touchy to fix."
+    },
+    "SemiBold/calyptapis-410.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-410.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-411.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-411.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-412.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-412.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-413.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-413.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-415.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-415.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-416.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-416.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-417.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-417.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-418.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-418.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-419.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-419.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-420.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-420.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-421.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-421.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-422.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-422.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-423.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-423.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-424.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-424.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-425.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-425.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-426.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-426.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-427.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-427.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-400.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-400.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-4000.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-4000.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-4002.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-4002.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-4003.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-4003.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-4004.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-4004.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-4005.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-4005.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-4006.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-4006.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-4007.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-4007.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-4009.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-4009.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-401.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-401.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-4010.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-4010.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-4011.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-4011.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-4013.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-4013.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-4014.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-4014.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-4015.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-4015.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-4017.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-4017.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-4018.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-4018.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-403.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-403.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-404.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-404.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-405.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-405.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-406.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-406.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-407.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-407.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-408.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-408.svg",
+      "sentiment": "up",
+      "comment": "Weights higher than UltraLight have a chunk out of the lower right where the bottom sweep meets the vertical stroke.  That's a little touchy to fix."
+    },
+    "Bold/calyptapis-409.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-409.svg",
+      "sentiment": "up",
+      "comment": "There is a chunk out of the lower right where the bottom sweep meets the vertical stroke.  That's a little touchy to fix."
+    },
+    "Bold/calyptapis-411.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-411.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-412.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-412.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-413.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-413.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-415.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-415.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-417.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-417.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-418.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-418.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-419.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-419.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-420.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-420.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-421.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-421.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-422.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-422.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-423.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-423.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-424.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-424.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-425.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-425.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-426.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-426.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-427.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-427.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-4001.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-4001.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-4012.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-4012.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-4016.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-4016.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-410.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-410.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-416.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-416.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-402.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-402.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-400.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-400.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-4000.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-4000.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-4001.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-4001.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-4002.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-4002.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-4003.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-4003.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-4004.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-4004.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-4005.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-4005.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-4006.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-4006.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-4007.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-4007.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-4009.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-4009.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-401.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-401.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-4010.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-4010.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-4011.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-4011.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-4012.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-4012.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-4013.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-4013.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-4014.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-4014.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-4015.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-4015.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-4016.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-4016.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-4017.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-4017.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-4018.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-4018.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-402.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-402.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-403.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-403.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-404.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-404.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-405.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-405.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-406.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-406.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-407.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-407.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-408.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-408.svg",
+      "sentiment": "up",
+      "comment": "Weights higher than UltraLight have a chunk out of the lower right where the bottom sweep meets the vertical stroke.  That's a little touchy to fix."
+    },
+    "Black/calyptapis-409.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-409.svg",
+      "sentiment": "up",
+      "comment": "There is a chunk out of the lower right where the bottom sweep meets the vertical stroke.  That's a little touchy to fix."
+    },
+    "Black/calyptapis-410.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-410.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-411.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-411.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-412.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-412.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-413.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-413.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-416.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-416.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-417.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-417.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-418.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-418.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-419.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-419.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-420.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-420.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-421.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-421.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-422.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-422.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-423.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-423.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-424.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-424.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-425.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-425.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-426.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-426.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-427.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-427.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-30.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-30.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-31.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-31.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-32.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-32.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-33.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-33.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-34.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-34.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-35.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-35.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-36.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-36.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-37.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-37.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-38.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-38.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-39.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-39.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-30.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-30.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-30.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-30.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-31.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-31.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-32.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-32.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-33.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-33.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-34.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-34.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-36.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-36.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-38.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-38.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-39.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-39.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-35.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-35.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-37.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-37.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-37.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-37.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-37.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-37.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-37.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-37.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-37.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-37.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-31.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-31.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-31.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-31.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-31.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-31.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-31.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-31.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-32.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-32.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-32.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-32.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-32.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-32.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-32.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-32.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-33.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-33.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-33.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-33.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-33.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-33.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-33.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-33.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-34.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-34.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-34.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-34.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-34.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-34.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-34.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-34.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-35.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-35.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-36.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-36.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-36.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-36.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-36.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-36.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-36.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-36.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-38.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-38.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-38.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-38.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-38.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-38.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-38.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-38.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-39.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-39.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-39.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-39.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-39.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-39.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-39.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-39.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-30.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-30.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-30.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-30.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-30.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-30.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-35.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-35.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "SemiBold/calyptapis-35.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-35.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Bold/calyptapis-35.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-35.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Black/calyptapis-4019.svg": {
+      "weight": "Black",
+      "glyph": "calyptapis-4019.svg",
+      "sentiment": "down",
+      "comment": "Too hard to see at this size."
+    },
+    "Bold/calyptapis-4019.svg": {
+      "weight": "Bold",
+      "glyph": "calyptapis-4019.svg",
+      "sentiment": "down",
+      "comment": "Too hard to see at this size."
+    },
+    "SemiBold/calyptapis-4019.svg": {
+      "weight": "SemiBold",
+      "glyph": "calyptapis-4019.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Normal/calyptapis-4019.svg": {
+      "weight": "Normal",
+      "glyph": "calyptapis-4019.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "Light/calyptapis-4019.svg": {
+      "weight": "Light",
+      "glyph": "calyptapis-4019.svg",
+      "sentiment": "up",
+      "comment": ""
+    },
+    "UltraLight/calyptapis-4019.svg": {
+      "weight": "UltraLight",
+      "glyph": "calyptapis-4019.svg",
+      "sentiment": "up",
+      "comment": ""
+    }
+  },
+  "metadata": {
+    "total_glyphs": 282,
+    "reviewed_count": 348
+  }
+}

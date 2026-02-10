@@ -1,0 +1,11 @@
+This is MetaPost, version 2.11 (TeX Live 2025) (kpathsea version 6.4.1)  6 FEB 2026 14:03
+**src/test_prototype.mp
+(/usr/local/texlive/2025/texmf-dist/metapost/base/mpost.mp
+(/usr/local/texlive/2025/texmf-dist/metapost/base/plain.mp
+Preloading the plain mem file, version 1.005) ) (./src/test_prototype.mp
+(./src/letters/U10408_prototype.mp [408]) (./src/letters/U10409_prototype.mp
+[409]) (./src/letters/U10426_prototype.mp [426])
+(./src/letters/Ue004_prototype.mp [4016]) (./src/letters/Ue005_prototype.mp
+[4017]) )
+5 output files written: test_prototype-408.svg .. test_prototype-4017.svg
+

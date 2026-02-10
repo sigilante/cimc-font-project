@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!-- Created by MetaPost 2.11 on 2026.02.09:1107 -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="79.621277" height="86.794800" viewBox="0 0 79.621277 86.794800">
+<!-- Original BoundingBox: -39.810638 -43.397400 39.810638 43.397400 -->
+  <path d="M39.810638 7.531982C19.236313 7.531982,7.531982 22.076828,7.531982 43.397400C7.531982 64.717972,19.236313 79.262817,39.810638 79.262817C60.384964 79.262817,72.089294 64.717972,72.089294 43.397400C72.089294 22.076828,60.384964 7.531982,39.810638 7.531982Z" style="stroke:rgb(0,0,0); stroke-width: 15.063950;stroke-linecap: round;stroke-linejoin: round;stroke-miterlimit: 10.000000;fill: none;"></path>
+  <path d="M39.810638 79.262817L39.810638 7.531982" style="stroke:rgb(0,0,0); stroke-width: 15.063950;stroke-linecap: round;stroke-linejoin: round;stroke-miterlimit: 10.000000;fill: none;"></path>
+  <path d="M26.170639 31.944885L24.313553 33.731293L22.402390 38.732880L21.556717 44.019958L22.271805 46.495575L53.450638 54.849915L55.307724 53.063507L57.218887 48.061920L58.064560 42.774841L57.349472 40.299225Z" style="fill: rgb(0,0,0);stroke: none;"></path>
+</svg>

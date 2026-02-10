@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!-- Created by MetaPost 2.11 on 2026.02.09:1107 -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="96.997513" height="82.490021" viewBox="0 0 96.997513 82.490021">
+<!-- Original BoundingBox: -5.541336 -41.245010 91.456177 41.245010 -->
+  <path d="M5.541336 53.199966C5.541336 67.413788,13.344284 77.110428,27.060608 77.110428C40.776932 77.110428,48.579880 67.413788,48.579880 53.199966" style="stroke:rgb(0,0,0); stroke-width: 10.759186;stroke-linecap: round;stroke-linejoin: round;stroke-miterlimit: 10.000000;fill: none;"></path>
+  <path d="M48.579376 53.199966C48.579376 67.413788,56.382324 77.110428,70.098648 77.110428C83.814972 77.110428,91.617920 67.413788,91.617920 53.199966" style="stroke:rgb(0,0,0); stroke-width: 10.759186;stroke-linecap: round;stroke-linejoin: round;stroke-miterlimit: 10.000000;fill: none;"></path>
+  <path d="M5.541336 53.199966C5.541336 48.769318,5.177414 45.662460,5.541336 41.245010C7.476974 17.748672,24.311630 5.379593,48.579376 5.379593C73.658798 5.379593,91.617920 17.635223,91.617920 41.245010C91.617920 45.672806,91.617920 48.772171,91.617920 53.199966" style="stroke:rgb(0,0,0); stroke-width: 10.759186;stroke-linecap: round;stroke-linejoin: round;stroke-miterlimit: 10.000000;fill: none;"></path>
+  <path d="M48.579880 53.199966L48.579880 41.245010" style="stroke:rgb(0,0,0); stroke-width: 10.759186;stroke-linecap: round;stroke-linejoin: round;stroke-miterlimit: 10.000000;fill: none;"></path>
+  <path d="M37.819992 35.865417L36.869019 37.441147L36.475082 41.245010L36.869019 45.048874L37.819992 46.624603L59.338760 46.624603L60.289734 45.048874L60.683670 41.245010L60.289734 37.441147L59.338760 35.865417Z" style="fill: rgb(0,0,0);stroke: none;"></path>
+</svg>

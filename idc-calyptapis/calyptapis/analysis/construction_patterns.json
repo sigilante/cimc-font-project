@@ -1,0 +1,103 @@
+{
+  "total_glyphs": 47,
+  "construction_patterns": {
+    "path_types": {
+      "closed_path": 17,
+      "curved_path": 6,
+      "serif": 48,
+      "loop": 25,
+      "crossbar": 28,
+      "straight_segment": 15,
+      "unknown": 3
+    },
+    "transformation_usage": {
+      "scaled": 33,
+      "shifted": 33,
+      "rotated": 1
+    },
+    "pen_usage": {
+      "thin_pen": 69,
+      "loz_pen": 77
+    },
+    "symmetry_usage": {
+      "vertical": 4,
+      "horizontal": 1,
+      "custom(0,0 to 0,y_radius)": 3,
+      "null": 1,
+      "custom(0,0 to x_radius,0)": 1
+    },
+    "complexity_distribution": [
+      4,
+      3,
+      2,
+      2,
+      1,
+      2,
+      3,
+      3,
+      2,
+      3,
+      3,
+      3,
+      3,
+      4,
+      3,
+      4,
+      3,
+      4,
+      3,
+      3,
+      4,
+      3,
+      4,
+      4,
+      5,
+      3,
+      3,
+      4,
+      2,
+      2,
+      4,
+      1,
+      3,
+      3,
+      3,
+      2,
+      3,
+      4,
+      4,
+      3,
+      4,
+      2,
+      4,
+      3,
+      3,
+      2,
+      2
+    ]
+  },
+  "common_transformations": {
+    "scaled": [
+      [
+        "2/3",
+        33
+      ]
+    ],
+    "shifted": [
+      [
+        "2/3*x_radius, 1/3*y_radius",
+        18
+      ],
+      [
+        "2/3*x_radius, -1/3*y_radius",
+        15
+      ]
+    ],
+    "rotated": [
+      [
+        "15",
+        1
+      ]
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!-- Created by MetaPost 2.11 on 2026.02.09:1107 -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="61.867325" height="84.641876" viewBox="0 0 61.867325 84.641876">
+<!-- Original BoundingBox: -12.373260 -42.320938 49.494064 42.320938 -->
+  <path d="M12.373260 78.186356L12.373260 30.365982" style="stroke:rgb(0,0,0); stroke-width: 12.911026;stroke-linecap: round;stroke-linejoin: round;stroke-miterlimit: 10.000000;fill: none;"></path>
+  <path d="M1.613876 71.730835L0.472717 73.621719L0.000000 78.186356L0.472717 82.750992L1.613876 84.641876L23.132645 84.641876L24.273804 82.750992L24.746521 78.186356L24.273804 73.621719L23.132645 71.730835Z" style="fill: rgb(0,0,0);stroke: none;"></path>
+  <path d="M33.892532 6.455521C20.176208 6.455521,12.373260 16.152161,12.373260 30.365982C12.373260 44.579803,20.176208 54.276443,33.892532 54.276443C47.608856 54.276443,55.411804 44.579803,55.411804 30.365982C55.411804 16.152161,47.608856 6.455521,33.892532 6.455521Z" style="stroke:rgb(0,0,0); stroke-width: 12.911026;stroke-linecap: round;stroke-linejoin: round;stroke-miterlimit: 10.000000;fill: none;"></path>
+</svg>

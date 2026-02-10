@@ -1,0 +1,129 @@
+{
+  "image_width": 310,
+  "image_height": 416,
+  "hierarchy": {
+    "global": [
+      {
+        "name": "pen_thick",
+        "value": 12.0,
+        "min": 8.399999999999999,
+        "max": 15.600000000000001,
+        "type": "pen_size"
+      },
+      {
+        "name": "pen_thin",
+        "value": 12.0,
+        "min": 6.0,
+        "max": 18.0,
+        "type": "pen_size"
+      },
+      {
+        "name": "global_tension",
+        "value": 1.0,
+        "min": 0.7,
+        "max": 1.5,
+        "type": "tension"
+      },
+      {
+        "name": "x_scale",
+        "value": 1.0,
+        "min": 0.8,
+        "max": 1.2,
+        "type": "scale"
+      },
+      {
+        "name": "y_scale",
+        "value": 1.0,
+        "min": 0.8,
+        "max": 1.2,
+        "type": "scale"
+      }
+    ],
+    "points": [
+      {
+        "x_base": {
+          "name": "x_a_0_base",
+          "optimizable": true,
+          "range_fraction": 0.15
+        },
+        "y_base": {
+          "name": "y_a_0_base",
+          "optimizable": true,
+          "range_fraction": 0.15
+        }
+      },
+      {
+        "x_base": {
+          "name": "x_a_1_base",
+          "optimizable": true,
+          "range_fraction": 0.15
+        },
+        "y_base": {
+          "name": "y_a_1_base",
+          "optimizable": true,
+          "range_fraction": 0.15
+        }
+      },
+      {
+        "x_base": {
+          "name": "x_a_2_base",
+          "optimizable": true,
+          "range_fraction": 0.15
+        },
+        "y_base": {
+          "name": "y_a_2_base",
+          "optimizable": true,
+          "range_fraction": 0.15
+        }
+      },
+      {
+        "x_base": {
+          "name": "x_a_3_base",
+          "optimizable": true,
+          "range_fraction": 0.15
+        },
+        "y_base": {
+          "name": "y_a_3_base",
+          "optimizable": true,
+          "range_fraction": 0.15
+        }
+      },
+      {
+        "x_base": {
+          "name": "x_a_4_base",
+          "optimizable": true,
+          "range_fraction": 0.15
+        },
+        "y_base": {
+          "name": "y_a_4_base",
+          "optimizable": true,
+          "range_fraction": 0.15
+        }
+      },
+      {
+        "x_base": {
+          "name": "x_b_0_base",
+          "optimizable": true,
+          "range_fraction": 0.15
+        },
+        "y_base": {
+          "name": "y_b_0_base",
+          "optimizable": true,
+          "range_fraction": 0.15
+        }
+      },
+      {
+        "x_base": {
+          "name": "x_b_1_base",
+          "optimizable": true,
+          "range_fraction": 0.15
+        },
+        "y_base": {
+          "name": "y_b_1_base",
+          "optimizable": true,
+          "range_fraction": 0.15
+        }
+      }
+    ]
+  }
+}
