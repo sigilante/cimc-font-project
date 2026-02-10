@@ -2,6 +2,8 @@
 
 A block Deseret Alphabet font based on the hand-drawn “Oversize Specimen”, ca. 1856, CHL MS 16662, img. 3/4.  IDC Perdita is intended as a historically faithful reconstruction of the intent of the author of the specimen, and as such extrapolates for some characters not represented in the original source.
 
+![](https://github.com/sigilante/cimc-font-project/blob/master/dtf-perdita/llm-perdita/design/MS_16662_item_3-Deseret_Alphabet_characters_circa_1852_bw.jpeg?raw=true)
+
 ## Characters
 
 The specimen includes thirteen vowels, one more than usual; 𐐜 is omitted, probably inadvertently. Between the glyphs for the FATE and PALM vowels (assuming standard collation) appears what is most likely a glyph for the SQUARE vowel, a combination of 𐐇 and 𐐈 (cf. DN 16 February 1859, p. 1, in support of this identification). Glyph shapes for the consonant in RUE and the vowel in STRUT suggest this object is from the era of the Woodruff specimen (1856) or the St.\ Louis typeface (1857). Includes minuscule and majuscule glyphs that differ primarily in size. Most majuscules have serifs whereas minuscules do not. Glyphs in some cases resemble a Gothic Book hand. May relate to “ornamented capitols” presented to the regency on 12 March 1859 (WWJ).
